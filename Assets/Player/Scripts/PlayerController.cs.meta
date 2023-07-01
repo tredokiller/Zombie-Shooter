@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 55238f69b45df24439e3ce7db8940899
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - weaponPosition: {instanceID: 0}
+  - playerMesh: {instanceID: 0}
+  - playerData: {fileID: 11400000, guid: ccf12b131efa72b4cbe44c3aabff15b0, type: 2}
+  executionOrder: 300
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

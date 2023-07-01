@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 21995aa9194d4ab439805b9a35c7bc97
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - shotSound: {instanceID: 0}
+  - reloadSound: {instanceID: 0}
+  - emptyMagazineSound: {fileID: 8300000, guid: 78d632ae199db1543b4031e5ebbd791a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

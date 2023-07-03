@@ -3,26 +3,36 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Weapons.Scripts;
 
-public class NewMenuManager : MonoBehaviour
-{
-    private WeaponSwitcher _weaponSwitcher;
-
-    private void Awake()
+    public class NewMenuManager : MonoBehaviour
     {
-        _weaponSwitcher = GetComponent<WeaponSwitcher>();
-    }
+        [SerializeField] private WeaponHandler _weaponHandler;
+        private WeaponType _currentWeaponType;
 
-    public void StartGame()
-    {
-        SceneManager.LoadScene(Scenes.Scenes.Playground.ToString());
-    }
+        public static Action<WeaponType> OnWeaponTypeChange; 
 
-    public void SwitchNextWeapon()
-    {
-        
-    }
+        public void StartGame()
+        {
+            SceneManager.LoadScene(global::Scenes.Scenes.Playground.ToString());
+        }
 
-    public void SwitchPrevWeapon()
-    {
+        public void SwitchNextWeapon()
+        {
+            _weaponHandler.NextWeapon();
+        }
+
+        public void SwitchPrevWeapon()
+        {
+            _weaponHandler.PrevWeapon();
+        }
+
+        public void SetPrimaryWeaponType()
+        {
+            _currentWeaponType = WeaponType.Primary;
+            OnWeaponTypeChange.Invoke(WeaponType.Primary);
+        }
+        public void SetSecondaryWeaponType()
+        {
+            _currentWeaponType = WeaponType.Secondary;
+            OnWeaponTypeChange.Invoke(_currentWeaponType);
+        }
     }
-}

@@ -4,18 +4,36 @@ using Weapons.Scripts.WeaponBase;
 
 public class WeaponHandler : MonoBehaviour
 {
-    [SerializeField] private Weapon[] secondaryWeapons;
     [SerializeField] private Weapon[] primaryWeapons;
+    [SerializeField] private Weapon[] secondaryWeapons;
     
     private IWeapon _currentPrimary;
     private int _currentPrimaryIndex;
-    
+
     private IWeapon _currentSecondary;
     private int _currentSecondaryIndex;
 
+    private WeaponType currentWeaponType;
+
     private void Awake()
     {
+        currentWeaponType = WeaponType.Primary;
         SetBasicWeapons();
+    }
+
+    private void OnEnable()
+    {
+        NewMenuManager.OnWeaponTypeChange += type => SetWeaponType(type);
+    }
+
+    private void OnDisable()
+    {
+        NewMenuManager.OnWeaponTypeChange -= type => SetWeaponType(type);
+    }
+
+    private void SetWeaponType(WeaponType weaponType)
+    {
+        currentWeaponType = weaponType;
     }
 
     private void SetBasicWeapons()
@@ -29,42 +47,54 @@ public class WeaponHandler : MonoBehaviour
         }
     }
 
-    public void DisplayNewPrimary()
+    public void NextWeapon()
     {
-        
+        if (currentWeaponType == WeaponType.Primary)
+            TryToSwitchWeapon(WeaponType.Primary, ref _currentPrimaryIndex, true);
+        else
+            TryToSwitchWeapon(WeaponType.Secondary, ref _currentSecondaryIndex, true);
     }
-    // private void TryToSwitchWeapon()
-    // {
-    //     if (weapons.Length > 0)
-    //     {
-    //         _currentWeaponIndex++;
-    //
-    //         if (_currentWeaponIndex >= weapons.Length)
-    //         {
-    //             _currentWeaponIndex = 0;
-    //         }
-    //         SetCurrentWeapon();
-    //     }
-    // }
 
-    public void SetNewPrimary(IWeapon newWeapon)
+    public void PrevWeapon()
     {
-        if (_currentPrimary != null)
-            if (_currentPrimary != newWeapon)
-                _currentPrimary.SetActive(false);
+        if (currentWeaponType == WeaponType.Primary)
+            TryToSwitchWeapon(WeaponType.Primary, ref _currentPrimaryIndex, false);
+        else
+            TryToSwitchWeapon(WeaponType.Secondary, ref _currentSecondaryIndex, false);
+    }
+
+    private void TryToSwitchWeapon(WeaponType weaponType, ref int weaponIndex, bool isNext)
+    {
+        var weapons = weaponType == WeaponType.Primary ? primaryWeapons : secondaryWeapons;
+
+        if (isNext && weapons.Length > 0)
+        {
+            weaponIndex++;
+            if (weaponIndex >= weapons.Length)
+            {
+                weaponIndex = 0;
+            }
+        }
+        else if (!isNext && weapons.Length > 0)
+        {
+            if (weaponIndex <= 0)
+            {
+                weaponIndex = weapons.Length;
+            }
+            weaponIndex--;
+        }
+        SetCurrentWeapon(weaponType, weapons, weaponIndex);
+    }
+
+    private void SetCurrentWeapon(WeaponType weaponType, Weapon[] weapons, int weaponIndex)
+    {
+        var currentWeapon = weaponType == WeaponType.Primary ? _currentPrimary : _currentSecondary;
+
+        if (currentWeapon != null)
+            currentWeapon.SetActive(false);
         
-        _currentPrimary = newWeapon;
-        _currentPrimary.SetActive(true);
+        currentWeapon = weapons[weaponIndex];
+        currentWeapon.SetActive(true);
     }
     
-    public void DisplayNewSecondary(IWeapon newWeapon)
-    {
-        if (_currentPrimary != null)
-            if (_currentPrimary != newWeapon)
-                _currentPrimary.SetActive(false);
-        
-        _currentPrimary = newWeapon;
-        _currentPrimary.SetActive(true);
-        
-    }
 }

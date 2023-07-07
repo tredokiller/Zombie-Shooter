@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="170c9caa-bba1-4342-a563-7082328b01f9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewMenu/NewMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewMenu/NewMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/NewMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/NewMenuManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="170c9caa-bba1-4342-a563-7082328b01f9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,7 +120,7 @@
       <workItem from="1688330736533" duration="1827000" />
       <workItem from="1688397538786" duration="9626000" />
       <workItem from="1688455992807" duration="1455000" />
-      <workItem from="1688652252595" duration="2127000" />
+      <workItem from="1688652252595" duration="2844000" />
     </task>
     <task id="LOCAL-00001" summary="[#1] Added &quot;NewMenu&quot; folder, test VCS">
       <created>1688297167519</created>
@@ -155,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688400263891</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[#6] Added DayTime">
+      <created>1688761884327</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688761884327</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +171,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/tredo-dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -183,6 +197,7 @@
     <MESSAGE value="Bugfix" />
     <MESSAGE value="Some changes" />
     <MESSAGE value="[#4] Added MenuManager and WeaponHandler, changed walls" />
-    <option name="LAST_COMMIT_MESSAGE" value="[#4] Added MenuManager and WeaponHandler, changed walls" />
+    <MESSAGE value="[#6] Added DayTime" />
+    <option name="LAST_COMMIT_MESSAGE" value="[#6] Added DayTime" />
   </component>
 </project>

@@ -15,6 +15,11 @@ using Weapons.Scripts;
             SceneManager.LoadScene(global::Scenes.Scenes.Playground.ToString());
         }
 
+        public void QuitGame()
+        {
+         Application.Quit();   
+        }
+
         public void SwitchNextWeapon()
         {
             _weaponHandler.NextWeapon();

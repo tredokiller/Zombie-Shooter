@@ -49,6 +49,7 @@ public class WeaponHandler : MonoBehaviour
 
     public void NextWeapon()
     {
+        Debug.Log("NextWeapPerf, " + _currentPrimary);
         if (currentWeaponType == WeaponType.Primary)
             TryToSwitchWeapon(WeaponType.Primary, ref _currentPrimaryIndex, true);
         else
@@ -89,11 +90,16 @@ public class WeaponHandler : MonoBehaviour
     private void SetCurrentWeapon(WeaponType weaponType, Weapon[] weapons, int weaponIndex)
     {
         var currentWeapon = weaponType == WeaponType.Primary ? _currentPrimary : _currentSecondary;
-
-        if (currentWeapon != null)
-            currentWeapon.SetActive(false);
+        
+        currentWeapon.SetActive(false);
         
         currentWeapon = weapons[weaponIndex];
+        
+        if (weaponType == WeaponType.Primary)
+            _currentPrimary = weapons[weaponIndex];
+        else
+            _currentSecondary = weapons[weaponIndex];
+
         currentWeapon.SetActive(true);
     }
     

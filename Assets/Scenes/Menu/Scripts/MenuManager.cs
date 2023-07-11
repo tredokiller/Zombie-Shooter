@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using Weapons.Scripts;
 
     public class MenuManager : MonoBehaviour
     {
-        [SerializeField] private WeaponHandler _weaponHandler;
+        [SerializeField] private WeaponHandler weaponHandler;
         private WeaponType _currentWeaponType;
 
         public static Action<WeaponType> OnWeaponTypeChange; 
@@ -22,12 +23,12 @@ using Weapons.Scripts;
 
         public void SwitchNextWeapon()
         {
-            _weaponHandler.NextWeapon();
+            weaponHandler.NextWeapon();
         }
 
         public void SwitchPrevWeapon()
         {
-            _weaponHandler.PrevWeapon();
+            weaponHandler.PrevWeapon();
         }
 
         public void SetPrimaryWeaponType()

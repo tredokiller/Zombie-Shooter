@@ -6,22 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="170c9caa-bba1-4342-a563-7082328b01f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/CommonScripts/DayTimeChanger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/CommonScripts/DayTimeChanger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/IdleWIthWeapons.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/IdleWIthWeapons.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/MenuPlayer.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/MenuPlayer.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/Troop.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/Troop.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/NewMenuManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/NewMenuManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/WeaponHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/WeaponHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/StatsShower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/StatsShower.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +131,9 @@
       <workItem from="1688455992807" duration="1455000" />
       <workItem from="1688652252595" duration="2844000" />
       <workItem from="1688821292516" duration="3893000" />
-      <workItem from="1688891108664" duration="1167000" />
+      <workItem from="1688891108664" duration="1862000" />
+      <workItem from="1689057090593" duration="299000" />
+      <workItem from="1689069597699" duration="1389000" />
     </task>
     <task id="LOCAL-00001" summary="[#1] Added &quot;NewMenu&quot; folder, test VCS">
       <created>1688297167519</created>
@@ -196,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688891307318</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="NewMenu -&gt; Menu&#10;Fixed bug with missing prefab">
+      <created>1688893126272</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688893126272</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +254,7 @@
     <MESSAGE value="[#6] Added DayTime" />
     <MESSAGE value="Fixed weapon change&#10;Some findings" />
     <MESSAGE value="Deleted slider" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted slider" />
+    <MESSAGE value="NewMenu -&gt; Menu&#10;Fixed bug with missing prefab" />
+    <option name="LAST_COMMIT_MESSAGE" value="NewMenu -&gt; Menu&#10;Fixed bug with missing prefab" />
   </component>
 </project>

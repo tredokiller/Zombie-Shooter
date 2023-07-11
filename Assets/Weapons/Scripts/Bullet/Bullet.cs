@@ -1,7 +1,8 @@
 using Common.CommonScripts;
+using DG.Tweening;
 using UnityEngine;
 
-namespace Weapons.Scripts
+namespace Weapons.Scripts.Bullet
 {
     [RequireComponent(typeof(Rigidbody))]
     public class Bullet : MonoBehaviour , IBullet
@@ -13,6 +14,7 @@ namespace Weapons.Scripts
         private float _damage;
 
         private bool _canDisableBulletByTimer;
+        private Tween _timer;
 
         private void Awake()
         {
@@ -27,10 +29,10 @@ namespace Weapons.Scripts
             _damage = damage;
             
             _rb.velocity = transform.forward * speed;
-            
+
             _canDisableBulletByTimer = true;
             
-            Timer.StartTimer(liveTime  , DisableBulletByTimer);
+            StartTimer();
         }
 
 
@@ -51,6 +53,15 @@ namespace Weapons.Scripts
         public float GetDamage()
         {
             return _damage;
+        }
+
+        private void StartTimer()
+        {
+            if (_timer != null)
+            {
+                _timer.Kill();
+            }
+            _timer = Timer.StartTimer(liveTime  , (() => SetBulletActive(false)));
         }
     }
 }

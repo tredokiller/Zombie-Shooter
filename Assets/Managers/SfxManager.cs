@@ -24,12 +24,12 @@ namespace Managers
             _musicSources = music.GetComponentsInChildren<AudioSource>();
         }
 
-        public void MakeSound(AudioClip sound)
+        public void MakeSound(AudioClip sound , float volume = 1)
         {
             gameObject.SetActive(true);
             sounds.SetActive(true);
             _soundSources = sounds.GetComponentsInChildren<AudioSource>();
-            MakeSfx(_soundSources, sound);
+            MakeSfx(_soundSources, sound , volume);
         }
         
         public void MakeMusic(AudioClip sfxMusic)
@@ -37,13 +37,14 @@ namespace Managers
             MakeSfx(_musicSources, sfxMusic);
         }
 
-        private void MakeSfx(AudioSource[] players , AudioClip clip)
+        private void MakeSfx(AudioSource[] players , AudioClip clip , float volume = 1)
         {
             foreach (var soundPlayer in players)
             {
                 soundPlayer.gameObject.SetActive(true);
                 if (!soundPlayer.isPlaying)
                 {
+                    soundPlayer.volume = volume;
                     soundPlayer.enabled = true;
                     soundPlayer.clip = clip;
                     soundPlayer.Play();

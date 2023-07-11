@@ -119,21 +119,21 @@ BlendTree:
     m_DirectBlendParameter: XValue
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 25a9f972b0881ff4b928905652dc72c5, type: 2}
+    m_Motion: {fileID: 7400000, guid: c4656dac938119e43adcfe1803e0bc3e, type: 2}
     m_Threshold: 0.875
     m_Position: {x: 0.75, y: -0.75}
-    m_TimeScale: 1
-    m_CycleOffset: 0.5
-    m_DirectBlendParameter: XValue
-    m_Mirror: 1
-  - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 25a9f972b0881ff4b928905652dc72c5, type: 2}
-    m_Threshold: 1
-    m_Position: {x: -0.75, y: -0.75}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: XValue
     m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: c4656dac938119e43adcfe1803e0bc3e, type: 2}
+    m_Threshold: 1
+    m_Position: {x: -0.74, y: -0.72}
+    m_TimeScale: 1
+    m_CycleOffset: 0.5
+    m_DirectBlendParameter: XValue
+    m_Mirror: 1
   m_BlendParameter: XValue
   m_BlendParameterY: YValue
   m_MinThreshold: 0

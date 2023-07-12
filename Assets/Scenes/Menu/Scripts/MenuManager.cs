@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using Weapons.Scripts;
 
     public class MenuManager : MonoBehaviour

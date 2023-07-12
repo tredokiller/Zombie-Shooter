@@ -48,6 +48,8 @@ public class WeaponHandler : MonoBehaviour
             _currentSecondary = secondaryWeapons[0];
             _currentPrimary.SetActive(true);
             _currentSecondary.SetActive(true);
+            
+            OnWeaponStatsChange.Invoke(_currentPrimary.GetWeaponData());
         }
     }
 
@@ -106,9 +108,4 @@ public class WeaponHandler : MonoBehaviour
         currentWeapon.SetActive(true);
         OnWeaponStatsChange.Invoke(currentWeapon.GetWeaponData());
     }
-    public void ShowWeaponStats()
-    {
-            
-    }
-    
 }

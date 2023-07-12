@@ -1,10 +1,12 @@
-using System;
 using UnityEngine;
 using Weapons.Scripts;
 public class StatsShower : MonoBehaviour
 {
     [SerializeField] private WeaponHandler weaponHandler;
     [SerializeField] private SliderScript damageSlider;
+    [SerializeField] private SliderScript ammoSlider;
+    [SerializeField] private SliderScript rapiditySlider;
+    [SerializeField] private SliderScript reloadTimeSlider;
     private WeaponData _weaponData;
     
     
@@ -26,7 +28,9 @@ public class StatsShower : MonoBehaviour
 
     private void SetSlidersValues()
     {
-        if (damageSlider != null)
-            damageSlider.SetSliderValue(_weaponData.damage);
+        damageSlider.SetSliderValue(_weaponData.damage);
+        ammoSlider.SetSliderValue(_weaponData.currentMagazineAmmo);
+        rapiditySlider.SetSliderValue(_weaponData.minTimeBetweenFire);
+        reloadTimeSlider.SetSliderValue(_weaponData.reloadTime);
     }
 }

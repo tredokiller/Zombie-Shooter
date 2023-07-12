@@ -169,6 +169,11 @@ namespace Weapons.Scripts.WeaponBase
         {
             return rightHand;
         }
+        
+        public WeaponData GetWeaponData()
+        {
+            return weaponData;
+        }
 
         public WeaponType GetWeaponType()
         {

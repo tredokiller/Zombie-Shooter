@@ -20,6 +20,8 @@ namespace Weapons.Scripts
         public Transform GetLeftHandTransform();
 
         public Transform GetRightHandTransform();
+
+        public WeaponData GetWeaponData();
         
         public WeaponType GetWeaponType();
     }

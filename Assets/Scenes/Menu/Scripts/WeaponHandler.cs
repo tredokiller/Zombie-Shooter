@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 using Weapons.Scripts;
 using Weapons.Scripts.WeaponBase;
 
 public class WeaponHandler : MonoBehaviour
 {
+    [Header("For weapons")]
     [SerializeField] private Weapon[] primaryWeapons;
     [SerializeField] private Weapon[] secondaryWeapons;
     
@@ -14,6 +16,8 @@ public class WeaponHandler : MonoBehaviour
     private int _currentSecondaryIndex;
 
     private WeaponType currentWeaponType;
+
+    public static Action<WeaponData> OnWeaponStatsChange; 
 
     private void Awake()
     {
@@ -49,7 +53,6 @@ public class WeaponHandler : MonoBehaviour
 
     public void NextWeapon()
     {
-        Debug.Log("NextWeapPerf, " + _currentPrimary);
         if (currentWeaponType == WeaponType.Primary)
             TryToSwitchWeapon(WeaponType.Primary, ref _currentPrimaryIndex, true);
         else
@@ -101,6 +104,11 @@ public class WeaponHandler : MonoBehaviour
             _currentSecondary = weapons[weaponIndex];
 
         currentWeapon.SetActive(true);
+        OnWeaponStatsChange.Invoke(currentWeapon.GetWeaponData());
+    }
+    public void ShowWeaponStats()
+    {
+            
     }
     
 }

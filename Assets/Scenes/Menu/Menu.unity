@@ -14692,6 +14692,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 272446007747271083, guid: eb508138a4a730b45a4b8a4fc47b71be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2101658542561667082, guid: eb508138a4a730b45a4b8a4fc47b71be, type: 3}
+      propertyPath: m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384972543768545486, guid: eb508138a4a730b45a4b8a4fc47b71be, type: 3}
+      propertyPath: weaponHandler
+      value: 
+      objectReference: {fileID: 1802287819}
+    - target: {fileID: 3351428499306569722, guid: eb508138a4a730b45a4b8a4fc47b71be, type: 3}
+      propertyPath: weaponHandler
+      value: 
+      objectReference: {fileID: 1802287819}
     - target: {fileID: 4998091608483440445, guid: eb508138a4a730b45a4b8a4fc47b71be, type: 3}
       propertyPath: weaponHandler
       value: 
@@ -14778,6 +14794,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5241158587310413128, guid: eb508138a4a730b45a4b8a4fc47b71be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304006699463889238, guid: eb508138a4a730b45a4b8a4fc47b71be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983545765101937869, guid: eb508138a4a730b45a4b8a4fc47b71be, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983545765101937869, guid: eb508138a4a730b45a4b8a4fc47b71be, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

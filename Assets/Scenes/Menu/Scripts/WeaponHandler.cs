@@ -28,6 +28,7 @@ public class WeaponHandler : MonoBehaviour
     private void OnEnable()
     {
         MenuManager.OnWeaponTypeChange += type => SetWeaponType(type);
+        
     }
 
     private void OnDisable()
@@ -48,11 +49,12 @@ public class WeaponHandler : MonoBehaviour
             _currentSecondary = secondaryWeapons[0];
             _currentPrimary.SetActive(true);
             _currentSecondary.SetActive(true);
-            
-            OnWeaponStatsChange.Invoke(_currentPrimary.GetWeaponData());
         }
     }
-
+    public void GetBasicWeaponData()
+    {
+        OnWeaponStatsChange.Invoke(_currentPrimary.GetWeaponData());
+    }
     public void NextWeapon()
     {
         if (currentWeaponType == WeaponType.Primary)

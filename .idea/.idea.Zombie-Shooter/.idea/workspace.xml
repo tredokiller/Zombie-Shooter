@@ -6,12 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="170c9caa-bba1-4342-a563-7082328b01f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Common/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Common/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Prefabs/UI_Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Prefabs/UI_Menu.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/StatsShower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/StatsShower.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/WeaponHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/WeaponHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Weapons/Secondary/Deagle/Deagle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Secondary/Deagle/Deagle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +52,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/bd/a690c4af/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6aa56e57ab504395b555cf3ed50fa53d46ac00/ea/85627ac2/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c9b376c3fca40b787e8c1a2133bf243171a00/8e/10546cce/InvokableCall.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/FromDesktop/GameManager (1).cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/FromDesktop/StackBlock (1).cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -64,7 +69,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.32994187&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.29651162&quot;,
     &quot;git-widget-placeholder&quot;: &quot;ivan-dev&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -107,10 +112,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="27080">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="27080" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -136,7 +141,8 @@
       <workItem from="1688891108664" duration="1862000" />
       <workItem from="1689057090593" duration="299000" />
       <workItem from="1689069597699" duration="9973000" />
-      <workItem from="1689198643605" duration="1949000" />
+      <workItem from="1689198643605" duration="3071000" />
+      <workItem from="1689460202465" duration="601000" />
     </task>
     <task id="LOCAL-00001" summary="[#1] Added &quot;NewMenu&quot; folder, test VCS">
       <created>1688297167519</created>
@@ -208,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689191374719</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Fixed StatsShower.cs bug with null, show stats of basic primary, changed ui_shop layout">
+      <created>1689200760318</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689200760318</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +287,7 @@
     <MESSAGE value="NewMenu -&gt; Menu&#10;Fixed bug with missing prefab" />
     <MESSAGE value="Menu by prefab, One canvas, RectTransform for UI" />
     <MESSAGE value="Fixed bug with cursor, fixed slider values change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with cursor, fixed slider values change" />
+    <MESSAGE value="Fixed StatsShower.cs bug with null, show stats of basic primary, changed ui_shop layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed StatsShower.cs bug with null, show stats of basic primary, changed ui_shop layout" />
   </component>
 </project>

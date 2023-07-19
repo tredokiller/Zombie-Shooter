@@ -15,13 +15,13 @@ public class WeaponHandler : MonoBehaviour
     private IWeapon _currentSecondary;
     private int _currentSecondaryIndex;
 
-    private WeaponType currentWeaponType;
+    private WeaponType _currentWeaponType;
 
     public static Action<WeaponData> OnWeaponStatsChange; 
 
     private void Awake()
     {
-        currentWeaponType = WeaponType.Primary;
+        _currentWeaponType = WeaponType.Primary;
         SetBasicWeapons();
     }
 
@@ -38,7 +38,7 @@ public class WeaponHandler : MonoBehaviour
 
     private void SetWeaponType(WeaponType weaponType)
     {
-        currentWeaponType = weaponType;
+        _currentWeaponType = weaponType;
     }
 
     private void SetBasicWeapons()
@@ -57,7 +57,7 @@ public class WeaponHandler : MonoBehaviour
     }
     public void NextWeapon()
     {
-        if (currentWeaponType == WeaponType.Primary)
+        if (_currentWeaponType == WeaponType.Primary)
             TryToSwitchWeapon(WeaponType.Primary, ref _currentPrimaryIndex, true);
         else
             TryToSwitchWeapon(WeaponType.Secondary, ref _currentSecondaryIndex, true);
@@ -65,7 +65,7 @@ public class WeaponHandler : MonoBehaviour
 
     public void PrevWeapon()
     {
-        if (currentWeaponType == WeaponType.Primary)
+        if (_currentWeaponType == WeaponType.Primary)
             TryToSwitchWeapon(WeaponType.Primary, ref _currentPrimaryIndex, false);
         else
             TryToSwitchWeapon(WeaponType.Secondary, ref _currentSecondaryIndex, false);
@@ -109,5 +109,11 @@ public class WeaponHandler : MonoBehaviour
 
         currentWeapon.SetActive(true);
         OnWeaponStatsChange.Invoke(currentWeapon.GetWeaponData());
+    }
+
+    public IWeapon[] GetWeapons()
+    {
+        IWeapon[] weapons = { _currentPrimary, _currentSecondary };
+        return weapons;
     }
 }

@@ -2,7 +2,6 @@ using UnityEngine;
 using Weapons.Scripts;
 public class StatsShower : MonoBehaviour
 {
-    [SerializeField] private WeaponHandler weaponHandler;
     [SerializeField] private SliderScript damageSlider;
     [SerializeField] private SliderScript ammoSlider;
     [SerializeField] private SliderScript rapiditySlider;

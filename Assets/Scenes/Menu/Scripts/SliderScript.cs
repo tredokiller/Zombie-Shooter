@@ -3,15 +3,15 @@ using UnityEngine.UI;
 
 public class SliderScript : MonoBehaviour
 {
-   private Slider slider;
+   private Slider _slider;
 
    private void Awake()
    {
-      slider = GetComponent<Slider>();
+      _slider = GetComponent<Slider>();
    }
 
    public void SetSliderValue(float value)
    {
-      slider.value = value;
+      _slider.value = value;
    }
 }

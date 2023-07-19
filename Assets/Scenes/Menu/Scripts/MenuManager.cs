@@ -7,12 +7,15 @@ using Weapons.Scripts;
     {
         [SerializeField] private WeaponHandler weaponHandler;
         private WeaponType _currentWeaponType;
+        private IWeapon[] _playerWeapons;
 
-        public static Action<WeaponType> OnWeaponTypeChange; 
+        public static Action<WeaponType> OnWeaponTypeChange;
 
+        private MenuStates _currentMenuState = MenuStates.Standard;
+        
         public void StartGame()
         {
-            SceneManager.LoadScene(global::Scenes.Scenes.Playground.ToString());
+            SceneManager.LoadScene(Scenes.Scenes.Playground.ToString());
         }
         
         public void QuitGame()
@@ -39,5 +42,15 @@ using Weapons.Scripts;
         {
             _currentWeaponType = WeaponType.Secondary;
             OnWeaponTypeChange.Invoke(_currentWeaponType);
+        }
+
+        public void SaveWeapons()
+        {
+            _playerWeapons = weaponHandler.GetWeapons();
+        }
+
+        public void SetWeaponChoosingState()
+        {
+            _currentMenuState = MenuStates.WeaponPicking;
         }
     }

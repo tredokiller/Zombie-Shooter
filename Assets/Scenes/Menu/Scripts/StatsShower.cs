@@ -1,3 +1,4 @@
+using Scenes.Menu.Scripts;
 using UnityEngine;
 using Weapons.Scripts;
 public class StatsShower : MonoBehaviour

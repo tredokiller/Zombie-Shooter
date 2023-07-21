@@ -7,6 +7,8 @@ namespace Weapons.Scripts
     {
         public WeaponType weaponType;
         public string weaponName = "Pistol";
+
+        public bool isPurchased = false;
         
         [Range(50 , 250)] public int maxAmmo = 100;
         
@@ -21,6 +23,5 @@ namespace Weapons.Scripts
         public AudioClip shotSound;
         public AudioClip reloadSound;
         public AudioClip emptyMagazineSound;
-
     }
 }

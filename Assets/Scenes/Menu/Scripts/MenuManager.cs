@@ -1,4 +1,5 @@
 using System;
+using Scenes.Menu.Scripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Weapons.Scripts;
@@ -11,7 +12,7 @@ using Weapons.Scripts;
 
         public static Action<WeaponType> OnWeaponTypeChange;
 
-        private MenuStates _currentMenuState = MenuStates.Standard;
+        #region ButtonLinksMethods
         
         public void StartGame()
         {
@@ -38,19 +39,22 @@ using Weapons.Scripts;
             _currentWeaponType = WeaponType.Primary;
             OnWeaponTypeChange.Invoke(WeaponType.Primary);
         }
+        
         public void SetSecondaryWeaponType()
         {
             _currentWeaponType = WeaponType.Secondary;
             OnWeaponTypeChange.Invoke(_currentWeaponType);
         }
 
+        public void TryToBuyAndEquipWeapon()
+        {
+            weaponHandler.TryToEquipWeapon();
+        }
+
         public void SaveWeapons()
         {
             _playerWeapons = weaponHandler.GetWeapons();
         }
-
-        public void SetWeaponChoosingState()
-        {
-            _currentMenuState = MenuStates.WeaponPicking;
-        }
+        
+        #endregion
     }

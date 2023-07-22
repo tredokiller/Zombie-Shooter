@@ -3,7 +3,7 @@ using Player.Scripts.States;
 
 namespace Enemies.States
 {
-    public class EnemyChaseState : StateBase<EnemyBase>
+    public class EnemyChaseState : StateBase<EnemyBase.Scripts.EnemyBase>
     {
         public override void Enter()
         {
@@ -22,6 +22,6 @@ namespace Enemies.States
             Controller.NavAgent.destination = Controller.TargetTransform.position;
         }
         
-        public EnemyChaseState(EnemyBase controller) : base(controller) { }
+        public EnemyChaseState(EnemyBase.Scripts.EnemyBase controller) : base(controller) { }
     }
 }

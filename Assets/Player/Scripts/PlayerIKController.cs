@@ -24,9 +24,6 @@ namespace Player.Scripts
 
         [SerializeField] private Transform[] foots;
 
-        [SerializeField] private AudioClip[] grassFootStepSounds;
-        [SerializeField] private AudioClip[] roadFootStepSounds;
-
         [SerializeField] private LayeredAudioClips[] footStepsDictionary;
 
         private const float DistanceToGroundFromFoot = 0.35f;
@@ -36,6 +33,7 @@ namespace Player.Scripts
         private ISfxManager _sfxManager;
 
         private bool _canProduceFootstepSound = true;
+        private bool _canCheckFootSteps = true;
 
         [Inject]
         private void Constructor(ISfxManager sfxManager)
@@ -51,12 +49,17 @@ namespace Player.Scripts
         private void OnEnable()
         {
             WeaponSwitcher.OnWeaponSwitched += UpdateHandsPosition;
+            PlayerController.OnDied += () => _canCheckFootSteps = false;
         }
 
         private void Update()
         {
             UpdateHandsPosition();
-            CheckFootSteps();
+            
+            if (_canCheckFootSteps)
+            {
+                CheckFootSteps();
+            }
         }
         
         private void PlayFootstepSound(RaycastHit groundHit)
@@ -107,6 +110,7 @@ namespace Player.Scripts
         private void OnDisable()
         {
             WeaponSwitcher.OnWeaponSwitched -= UpdateHandsPosition;
+            PlayerController.OnDied -= () => _canCheckFootSteps = false;
         }
     }
 }

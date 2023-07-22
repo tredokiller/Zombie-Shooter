@@ -1,5 +1,6 @@
 using UnityEngine;
 using Weapons.Scripts;
+using Weapons.Scripts.WeaponBase;
 
 public class StatsShower : MonoBehaviour
 {

@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace Enemies.States
 {
-    public class EnemyAttackState : StateBase<EnemyBase>
+    public class EnemyAttackState : StateBase<EnemyBase.Scripts.EnemyBase>
     {
-        public EnemyAttackState(EnemyBase controller, float latencyToGiveDamageToPlayer) : base(controller)
+        public EnemyAttackState(EnemyBase.Scripts.EnemyBase controller, float latencyToGiveDamageToPlayer) : base(controller)
         {
             _latencyToGiveDamageToPlayer = latencyToGiveDamageToPlayer;
         }

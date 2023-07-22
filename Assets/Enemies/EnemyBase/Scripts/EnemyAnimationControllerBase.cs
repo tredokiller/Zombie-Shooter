@@ -6,7 +6,7 @@ namespace Enemies.DefaultZombie.Scripts
     public class EnemyAnimationControllerBase : MonoBehaviour
     {
         private Animator _animator;
-        private EnemyBase _enemyBase;
+        private EnemyBase.Scripts.EnemyBase _enemyBase;
         private static readonly int State = Animator.StringToHash("State");
         private static readonly int IsDamaged = Animator.StringToHash("IsDamaged");
 
@@ -15,7 +15,7 @@ namespace Enemies.DefaultZombie.Scripts
 
         private void Awake()
         {
-            _enemyBase = GetComponent<EnemyBase>();
+            _enemyBase = GetComponent<EnemyBase.Scripts.EnemyBase>();
             _animator = _enemyBase.Mesh.GetComponent<Animator>();
         }
 

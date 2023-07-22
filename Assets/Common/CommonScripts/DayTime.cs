@@ -1,32 +1,40 @@
 using UnityEngine;
-[ExecuteInEditMode]
-public class DayTimeChanger : MonoBehaviour
+
+namespace Common.CommonScripts
 {
-    [SerializeField] private Gradient _directionalLightGradient;
-    [SerializeField] private Gradient _ambientLightGradient;
-
-    [SerializeField, Range(1, 3600)] private float _dayTimeInSeconds;
-    [SerializeField, Range(0f, 1f)] private float _timeProgress;
-
-    [SerializeField] private Light _directionalLight;
-
-    private Vector3 _defaultAngles;
-    void Start() => _defaultAngles = _directionalLight.transform.localEulerAngles;
-
-    private void Update()
+    [ExecuteInEditMode]
+    public class DayTimeChanger : MonoBehaviour
     {
-        if (Application.isPlaying)
-            _timeProgress += Time.deltaTime / _dayTimeInSeconds;
-        
-        if (_timeProgress > 1f)
+        [SerializeField] private Gradient directionalLightGradient;
+        [SerializeField] private Gradient ambientLightGradient;
+
+        [SerializeField, Range(1, 3600)] private float dayTimeInSeconds;
+        [SerializeField, Range(0f, 1f)] private float timeProgress;
+
+        [SerializeField] private Light directionalLight;
+
+        private Vector3 _defaultAngles;
+
+        private void Start()
         {
-            _timeProgress = 0f;
+            _defaultAngles = directionalLight.transform.localEulerAngles;
         }
 
-        _directionalLight.color = _directionalLightGradient.Evaluate(_timeProgress);
-        RenderSettings.ambientLight = _ambientLightGradient.Evaluate(_timeProgress);
+        private void Update()
+        {
+            if (Application.isPlaying)
+                timeProgress += Time.deltaTime / dayTimeInSeconds;
+        
+            if (timeProgress > 1f)
+            {
+                timeProgress = 0f;
+            }
 
-        _directionalLight.transform.localEulerAngles =
-            new Vector3(360f * _timeProgress - 90f, _defaultAngles.x, _defaultAngles.z);
+            directionalLight.color = directionalLightGradient.Evaluate(timeProgress);
+            RenderSettings.ambientLight = ambientLightGradient.Evaluate(timeProgress);
+
+            directionalLight.transform.localEulerAngles =
+                new Vector3(360f * timeProgress - 90f, _defaultAngles.x, _defaultAngles.z);
+        }
     }
 }

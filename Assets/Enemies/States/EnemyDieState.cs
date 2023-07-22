@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace Enemies.States
 {
-    public class EnemyDieState : StateBase<EnemyBase>
+    public class EnemyDieState : StateBase<EnemyBase.Scripts.EnemyBase>
     {
-        public EnemyDieState(EnemyBase controller) : base(controller) { }
+        public EnemyDieState(EnemyBase.Scripts.EnemyBase controller) : base(controller) { }
 
         private const float TimeToDisableEnemy = 8f;
         
@@ -16,6 +16,8 @@ namespace Enemies.States
             Controller.OnDied?.Invoke();
             Controller.SetState(State.Die);
             Controller.NavAgent.speed = 0;
+            
+            Controller.PlaySound(ActionSoundType.Death);
                 
             Timer.StartTimer(TimeToDisableEnemy, () => Controller.gameObject.SetActive(false));
         }

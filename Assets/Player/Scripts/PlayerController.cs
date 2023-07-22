@@ -2,10 +2,12 @@ using System;
 using Common.CommonScripts;
 using Common.CommonScripts.States;
 using Inputs;
+using Managers;
 using Player.Scripts.States;
 using UnityEngine;
 using Weapons.Scripts;
 using Zenject;
+using Random = UnityEngine.Random;
 
 namespace Player.Scripts
 {
@@ -17,6 +19,10 @@ namespace Player.Scripts
         [SerializeField] private Transform weaponPositions;
         [SerializeField] private Transform rifleWeaponPosition;
         [SerializeField] private Transform pistolWeaponPosition;
+
+        [Header("Sounds")] 
+        [SerializeField] private AudioClip[] damageAudios;
+        
         
         [Header("Mesh")]
         [SerializeField] private Transform playerMesh;
@@ -41,6 +47,7 @@ namespace Player.Scripts
         
         private InputManager _inputManager;
         private GameInput.PlayerActions _playerActions;
+        private ISfxManager _sfxManager;
 
         private Vector3 _horizontalDirection;
         private Vector2 _horizontalVelocity;
@@ -57,6 +64,7 @@ namespace Player.Scripts
         private IState _runState;
         private IState _jogState;
         private IState _idleState;
+        private IState _deathState;
 
         private Camera _camera;
         
@@ -66,10 +74,11 @@ namespace Player.Scripts
         public static Action OnDied;
 
         [Inject]
-        private void Constructor(InputManager inputManager ,IMouseInteraction mouseInteraction)
+        private void Constructor(InputManager inputManager ,IMouseInteraction mouseInteraction, ISfxManager sfxManager)
         {
-            _inputManager = inputManager ? inputManager : throw new ArgumentNullException(nameof(inputManager));
-            _mouseInteraction = mouseInteraction ?? throw new ArgumentNullException(nameof(mouseInteraction));
+            _inputManager = inputManager;
+            _mouseInteraction = mouseInteraction;
+            _sfxManager = sfxManager;
         }
         
         private void SetPlayerData()
@@ -100,6 +109,7 @@ namespace Player.Scripts
             _jogState = new PlayerJogState(this);
             _idleState = new IdleStateBase(this);
             _runState = new PlayerRunState(this);
+            _deathState = new PlayerDeathState(this);
         }
 
         private void OnEnable()
@@ -117,12 +127,12 @@ namespace Player.Scripts
         {
             UpdateInputPlayer();
             UpdateState();
-            UpdateWeaponInteraction();
             ApplyGravity();
 
+            if (_isDied) return;
             Rotate();
-            
             Move();
+            UpdateWeaponInteraction();
         }
 
         private void ApplyGravity()
@@ -183,6 +193,11 @@ namespace Player.Scripts
 
         private void UpdateState()
         {
+            if (_isDied)
+            {
+                _stateMachine.SetState(_deathState);
+                return;
+            }
             if (_horizontalVelocity.magnitude <= 0.1f)
             {
                 _stateMachine.SetState(_idleState);
@@ -263,13 +278,13 @@ namespace Player.Scripts
         public void TookDamage(float damage)
         {
             Health -= damage;
-            if (Health <= 0)
+            OnDamaged?.Invoke();
+            if (Health <= 0 && !_isDied)
             {
                 _isDied = true;
-                OnDied?.Invoke();
                 return;
             }
-            OnDamaged?.Invoke();
+            _sfxManager.MakeSound(damageAudios[Random.Range(0 , damageAudios.Length)]);
         }
     }
 }

@@ -11,7 +11,24 @@ using Weapons.Scripts;
         private IWeapon[] _playerWeapons;
 
         public static Action<WeaponType> OnWeaponTypeChange;
+        public static Action<int> OnWeaponBuyAndEquip;
+        public static Action<int> OnPlayerCoinsChange;
+        public int PlayerCoins { get; private set; } = 0;
 
+        private void OnEnable()
+        {
+            OnPlayerCoinsChange += SetCoinsValue;
+        }
+
+        private void OnDisable()
+        {
+            OnPlayerCoinsChange -= SetCoinsValue;
+        }
+
+        private void SetCoinsValue(int newValue)
+        {
+            
+        }
         #region ButtonLinksMethods
         
         public void StartGame()
@@ -48,7 +65,7 @@ using Weapons.Scripts;
 
         public void TryToBuyAndEquipWeapon()
         {
-            weaponHandler.TryToEquipWeapon();
+            OnWeaponBuyAndEquip.Invoke(PlayerCoins);
         }
 
         public void SaveWeapons()

@@ -10,7 +10,9 @@ namespace Scenes.Menu.Scripts
         [Header("For weapons")]
         [SerializeField] private Weapon[] primaryWeapons;
         [SerializeField] private Weapon[] secondaryWeapons;
-    
+
+        private IWeapon _currentDisplayedWeapon;
+        
         private IWeapon _currentPrimary;
         private int _currentPrimaryIndex;
 
@@ -30,20 +32,25 @@ namespace Scenes.Menu.Scripts
         private void OnEnable()
         {
             MenuManager.OnWeaponTypeChange += SetWeaponType;
+            MenuManager.OnWeaponBuyAndEquip += TryToBuyWeapon;
         }
 
         private void OnDisable()
         {
             MenuManager.OnWeaponTypeChange -= SetWeaponType;
+            MenuManager.OnWeaponBuyAndEquip -= TryToBuyWeapon;
+            
         }
 
         private void SetWeaponType(WeaponType weaponType)
         {
             _currentWeaponType = weaponType;
             
-            PushWeaponData(weaponType == WeaponType.Primary
-                ? _currentPrimary.GetWeaponData()
-                : _currentSecondary.GetWeaponData());
+            _currentDisplayedWeapon = weaponType == WeaponType.Primary
+                ? _currentPrimary
+                : _currentSecondary;
+            
+            PushWeaponData(_currentDisplayedWeapon.GetWeaponData());
         }
 
         private void PushWeaponData(WeaponData weaponData)
@@ -100,27 +107,48 @@ namespace Scenes.Menu.Scripts
         }
 
         private void SetCurrentWeapon(WeaponType weaponType, Weapon[] weapons, int weaponIndex)
-        {
-            var currentWeapon = weaponType == WeaponType.Primary ? _currentPrimary : _currentSecondary;
+        { 
+            _currentDisplayedWeapon = weaponType == WeaponType.Primary ? _currentPrimary : _currentSecondary;
         
-            currentWeapon.SetActive(false);
+            _currentDisplayedWeapon.SetActive(false);
         
-            currentWeapon = weapons[weaponIndex];
+            _currentDisplayedWeapon = weapons[weaponIndex];
         
             if (weaponType == WeaponType.Primary)
                 _currentPrimary = weapons[weaponIndex];
             else
                 _currentSecondary = weapons[weaponIndex];
 
-            currentWeapon.SetActive(true);
-            PushWeaponData(currentWeapon.GetWeaponData());
+            _currentDisplayedWeapon.SetActive(true);
+            PushWeaponData(_currentDisplayedWeapon.GetWeaponData());
         }
-
-        public void TryToEquipWeapon()
+        private void TryToBuyWeapon(int coins)
         {
-           
-        }
+            if (_currentDisplayedWeapon.GetWeaponData().isPurchased)
+            {
+                EquipWeapon();
+                return;
+            }
 
+            var weaponPrice = _currentDisplayedWeapon.GetWeaponData().weaponPrice;
+            
+            if (coins < weaponPrice)
+            {
+                Debug.Log("Not enough money!");
+                return;
+            }
+            
+            MenuManager.OnPlayerCoinsChange.Invoke(coins - weaponPrice);
+            
+            Debug.Log("Purchased successfully!, coins left: " + (coins - weaponPrice));
+        }
+        private void EquipWeapon()
+        {
+            if (_currentWeaponType == WeaponType.Primary)
+                _currentPrimary = _currentDisplayedWeapon;
+            else
+                _currentSecondary = _currentDisplayedWeapon;
+        }
         public IWeapon[] GetWeapons()
         {
             IWeapon[] weapons = { _currentPrimary, _currentSecondary };

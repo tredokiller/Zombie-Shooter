@@ -8,6 +8,7 @@ namespace Weapons.Scripts
         public WeaponType weaponType;
         public string weaponName = "Pistol";
 
+        public int weaponPrice;
         public bool isPurchased = false;
         
         [Range(50 , 250)] public int maxAmmo = 100;

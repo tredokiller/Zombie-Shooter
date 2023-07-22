@@ -7,15 +7,7 @@
     <list default="true" id="170c9caa-bba1-4342-a563-7082328b01f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/PostProcessing.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/PostProcessing/PostProcessing.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/PostProcessing/PostProcessing.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/PostProcessing/PostProcessingController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/PostProcessing/PostProcessingController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuStates.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuStates.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/StatsShower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/StatsShower.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/WeaponHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/WeaponHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Weapons/Scripts/WeaponBase/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Scripts/WeaponBase/WeaponData.cs" afterDir="false" />
     </list>
@@ -51,7 +43,7 @@
     <setting file="file://$PROJECT_DIR$/../ProjectMovement/Assets/Skripts/PlayerStates/BaseState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ProjectMovement/Assets/Skripts/PlayerStates/RunState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/SliderScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Runtime/PostProcessLayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Runtime/PostProcessLayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.7/Editor/Data/Graphs/SerializableTexture.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
@@ -85,7 +77,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -161,7 +153,8 @@
       <workItem from="1689783785303" duration="653000" />
       <workItem from="1689784762026" duration="4361000" />
       <workItem from="1689849299039" duration="5207000" />
-      <workItem from="1689957315777" duration="643000" />
+      <workItem from="1689957315777" duration="3562000" />
+      <workItem from="1690034513342" duration="675000" />
     </task>
     <task id="LOCAL-00001" summary="[#1] Added &quot;NewMenu&quot; folder, test VCS">
       <created>1688297167519</created>
@@ -255,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689790624930</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Deleted post-processing, some fixes, added buy button, saving commit before changing WeaponHandler.cs logic">
+      <option name="closed" value="true" />
+      <created>1689958297270</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689958297270</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +326,8 @@
     <MESSAGE value="Fixed StatsShower.cs bug with null, show stats of basic primary, changed ui_shop layout" />
     <MESSAGE value="Settings UI, Added post processing, Changed camera positions" />
     <MESSAGE value="Сhanged architecture in inspector&#10;SaveWeap method&#10;Added 2 cinemachine cams&#10;MenuStates.cs&#10;Some fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сhanged architecture in inspector&#10;SaveWeap method&#10;Added 2 cinemachine cams&#10;MenuStates.cs&#10;Some fixes" />
+    <MESSAGE value="Deleted post-processing, some fixes, added buy button, saving commit" />
+    <MESSAGE value="Deleted post-processing, some fixes, added buy button, saving commit before changing WeaponHandler.cs logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted post-processing, some fixes, added buy button, saving commit before changing WeaponHandler.cs logic" />
   </component>
 </project>

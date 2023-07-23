@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.31685096, g: 0.47391224, b: 0.8113208, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 5761439}
-  m_IndirectSpecularColor: {r: 0.17285007, g: 0.21600471, b: 0.29795796, a: 1}
+  m_IndirectSpecularColor: {r: 0.000017033932, g: 0.000000025772884, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -274,7 +274,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5761438}
-  m_LocalRotation: {x: 0.53139526, y: 0.46860477, z: -0.49901336, w: 0.49901336}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 2.5367985, y: -1.527526, z: -1.6376002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2338,7 +2338,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333121564}
-  m_LocalRotation: {x: -0.9998767, y: -6.865851e-10, z: -0.015707238, w: 0.000000043706}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.00037032145, y: -0.00011764894, z: 0.05780286}
   m_LocalScale: {x: 2.2806993, y: 2.4527032, z: 2.2806997}
   m_ConstrainProportionsScale: 0
@@ -2357,7 +2357,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.7833288, g: 0.56906503, b: 0.4806247, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2.54
   m_Range: 7.64
   m_SpotAngle: 30
@@ -2580,22 +2580,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _directionalLightGradient:
     serializedVersion: 2
-    key0: {r: 0.23529413, g: 0.31764707, b: 0.48627454, a: 1}
-    key1: {r: 0.86499584, g: 0.7638956, b: 0.7638956, a: 1}
-    key2: {r: 1, g: 0.66474944, b: 0.4669811, a: 0}
-    key3: {r: 1, g: 1, b: 1, a: 0}
-    key4: {r: 1, g: 1, b: 1, a: 0}
-    key5: {r: 0.9960785, g: 0.6666667, b: 0.4784314, a: 0}
-    key6: {r: 0.8490566, g: 0.39055058, b: 0.17221431, a: 0}
-    key7: {r: 0.23529413, g: 0.31764707, b: 0.48627454, a: 0}
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 8674
-    ctime2: 12914
-    ctime3: 20432
-    ctime4: 38357
-    ctime5: 45104
-    ctime6: 48959
-    ctime7: 55705
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
     atime0: 0
     atime1: 65535
     atime2: 0
@@ -2606,26 +2606,26 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 8
+    m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   _ambientLightGradient:
     serializedVersion: 2
-    key0: {r: 0.23529413, g: 0.31764707, b: 0.4901961, a: 1}
-    key1: {r: 0.4811321, g: 0.28821456, b: 0.11574403, a: 1}
-    key2: {r: 0.3329477, g: 0.4879136, b: 0.8113208, a: 0}
-    key3: {r: 0.3099858, g: 0.46794075, b: 0.8113208, a: 0}
-    key4: {r: 0.509434, g: 0.3323415, b: 0.18022428, a: 0}
-    key5: {r: 0.27860254, g: 0.3231891, b: 0.44720066, a: 0}
-    key6: {r: 0.26820046, g: 0.325278, b: 0.46226418, a: 0}
-    key7: {r: 0.23371306, g: 0.31691894, b: 0.49056602, a: 0}
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 14264
-    ctime2: 20046
-    ctime3: 39128
-    ctime4: 48380
-    ctime5: 57054
-    ctime6: 58211
-    ctime7: 65535
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
     atime0: 0
     atime1: 65535
     atime2: 0
@@ -2636,11 +2636,11 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 8
+    m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  _dayTimeInSeconds: 70
-  _timeProgress: 0.51
-  _directionalLight: {fileID: 5761439}
+  _dayTimeInSeconds: 0
+  _timeProgress: 0
+  _directionalLight: {fileID: 1225446285}
 --- !u!1001 &363334479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8427,10 +8427,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c20bbd520b83e74db76b04ef2a2ef17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageSlider: {fileID: 555769468}
-  ammoSlider: {fileID: 1325543580}
-  rapiditySlider: {fileID: 225781504}
-  reloadTimeSlider: {fileID: 265200791}
+  damageSlider: {fileID: 0}
+  ammoSlider: {fileID: 0}
+  rapiditySlider: {fileID: 0}
+  reloadTimeSlider: {fileID: 0}
 --- !u!4 &487276653 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f8ca77d888ad7c058a3f1ce36ded1aa6, type: 3}
@@ -13156,7 +13156,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225446283}
-  m_LocalRotation: {x: -0.9998767, y: -6.865851e-10, z: -0.015707238, w: 0.000000043706}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: -0.5}
   m_LocalPosition: {x: 1.0567751, y: 0, z: -8.077506}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13175,7 +13175,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.7833288, g: 0.56906503, b: 0.4806247, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

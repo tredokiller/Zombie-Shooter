@@ -1,4 +1,5 @@
 using UnityEngine;
+using Weapons.Scripts.WeaponBase;
 
 namespace Weapons.Scripts
 {

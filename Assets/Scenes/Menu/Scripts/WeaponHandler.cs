@@ -22,6 +22,7 @@ namespace Scenes.Menu.Scripts
         private WeaponType _currentWeaponType;
 
         public static Action<WeaponData> OnWeaponStatsChange; 
+        public static Action<bool> OnIsPurchasedState; 
 
         private void Awake()
         {
@@ -33,12 +34,14 @@ namespace Scenes.Menu.Scripts
         {
             MenuManager.OnWeaponTypeChange += SetWeaponType;
             MenuManager.OnWeaponBuyAndEquip += TryToBuyWeapon;
+            MenuManager.OnWeaponScroll += CheckIsPurchasedState;
         }
 
         private void OnDisable()
         {
             MenuManager.OnWeaponTypeChange -= SetWeaponType;
             MenuManager.OnWeaponBuyAndEquip -= TryToBuyWeapon;
+            MenuManager.OnWeaponScroll -= CheckIsPurchasedState;
             
         }
 
@@ -122,6 +125,12 @@ namespace Scenes.Menu.Scripts
             _currentDisplayedWeapon.SetActive(true);
             PushWeaponData(_currentDisplayedWeapon.GetWeaponData());
         }
+
+        private void CheckIsPurchasedState()
+        {
+            OnIsPurchasedState.Invoke(_currentDisplayedWeapon.GetWeaponData().isPurchased);
+        }
+        
         private void TryToBuyWeapon(int coins)
         {
             if (_currentDisplayedWeapon.GetWeaponData().isPurchased)
@@ -137,10 +146,19 @@ namespace Scenes.Menu.Scripts
                 Debug.Log("Not enough money!");
                 return;
             }
-            
+
+            PurchaseOrSellWeapon(true);
             MenuManager.OnPlayerCoinsChange.Invoke(coins - weaponPrice);
             
             Debug.Log("Purchased successfully!, coins left: " + (coins - weaponPrice));
+            OnIsPurchasedState.Invoke(_currentDisplayedWeapon.GetWeaponData().isPurchased);
+            
+            EquipWeapon();
+        }
+
+        public void PurchaseOrSellWeapon(bool isPurchased)
+        {
+            _currentDisplayedWeapon.GetWeaponData().isPurchased = isPurchased;
         }
         private void EquipWeapon()
         {

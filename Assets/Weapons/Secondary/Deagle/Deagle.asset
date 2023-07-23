@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 0
   weaponName: Pistol
+  weaponPrice: 250
+  isPurchased: 0
   maxAmmo: 50
   maxMagazineAmmo: 10
   reloadTime: 1.3

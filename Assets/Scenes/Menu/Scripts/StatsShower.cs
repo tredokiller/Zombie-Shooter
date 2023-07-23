@@ -7,9 +7,9 @@ public class StatsShower : MonoBehaviour
     [SerializeField] private SliderScript ammoSlider;
     [SerializeField] private SliderScript rapiditySlider;
     [SerializeField] private SliderScript reloadTimeSlider;
+    
     private WeaponData _weaponData;
-    
-    
+
     private void OnEnable()
     {
         WeaponHandler.OnWeaponStatsChange += data => SetWeaponData(data);

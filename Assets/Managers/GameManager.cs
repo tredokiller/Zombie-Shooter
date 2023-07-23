@@ -1,7 +1,5 @@
 using UnityEngine;
-using Weapons.AmmoBox.Scripts;
 using Weapons.Scripts;
-using Zenject;
 
 namespace Managers
 {

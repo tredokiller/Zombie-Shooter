@@ -1,4 +1,5 @@
 using UnityEngine;
+using Weapons.Scripts.WeaponBase;
 
 namespace Weapons.Scripts
 {
@@ -20,6 +21,8 @@ namespace Weapons.Scripts
         public Transform GetLeftHandTransform();
 
         public Transform GetRightHandTransform();
+
+        public WeaponData GetWeaponData();
         
         public WeaponType GetWeaponType();
     }

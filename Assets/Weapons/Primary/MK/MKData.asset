@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 1
   weaponName: MK
+  weaponPrice: 300
+  isPurchased: 0
   maxAmmo: 100
   maxMagazineAmmo: 30
   reloadTime: 3.37

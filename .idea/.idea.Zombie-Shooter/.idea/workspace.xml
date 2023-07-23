@@ -6,22 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="170c9caa-bba1-4342-a563-7082328b01f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/CommonScripts/DayTimeChanger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Common/CommonScripts/DayTimeChanger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/IdleWIthWeapons.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/IdleWIthWeapons.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/MenuPlayer.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/MenuPlayer.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/Troop.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Objects/MenuPlayer/Troop.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/NewMenuManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/NewMenuManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/WeaponHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/WeaponHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/StatsShower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/StatsShower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/WeaponHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/WeaponHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Weapons/Primary/MK/MKData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/MK/MKData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Weapons/Secondary/Deagle/Deagle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Secondary/Deagle/Deagle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Weapons/Secondary/Glock/GlockData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Weapons/Secondary/Glock/GlockData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,38 +43,51 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/MenuManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/StatsShower.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/NewMenu/Scripts/WeaponHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ProjectMovement/Assets/Skripts/Player/JumpController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ProjectMovement/Assets/Skripts/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ProjectMovement/Assets/Skripts/PlayerStates/BaseState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../ProjectMovement/Assets/Skripts/PlayerStates/RunState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/SliderScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Runtime/PostProcessLayer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.7/Editor/Data/Graphs/SerializableTexture.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/bd/a690c4af/Int32.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6aa56e57ab504395b555cf3ed50fa53d46ac00/ea/85627ac2/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/9b/417ae990/Action.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c9b376c3fca40b787e8c1a2133bf243171a00/48/31525932/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c9b376c3fca40b787e8c1a2133bf243171a00/8e/10546cce/InvokableCall.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c9b376c3fca40b787e8c1a2133bf243171a00/bf/afb490ca/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/FromDesktop/GameManager (1).cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/FromDesktop/StackBlock (1).cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2S0vlzRSWpEg4Z1iXBpAGYIxf6r" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.32994187&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.29651162&quot;,
     &quot;git-widget-placeholder&quot;: &quot;ivan-dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -94,7 +100,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Programs\2022.3.0f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\UnityProjects\Zombie-Shooter -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\UnityProjects\Zombie-Shooter" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -102,7 +108,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Programs\2022.3.0f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.0f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\UnityProjects\Zombie-Shooter -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\UnityProjects\Zombie-Shooter" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -119,10 +125,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1940">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="1940" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -145,7 +151,21 @@
       <workItem from="1688455992807" duration="1455000" />
       <workItem from="1688652252595" duration="2844000" />
       <workItem from="1688821292516" duration="3893000" />
-      <workItem from="1688891108664" duration="1167000" />
+      <workItem from="1688891108664" duration="1862000" />
+      <workItem from="1689057090593" duration="299000" />
+      <workItem from="1689069597699" duration="9973000" />
+      <workItem from="1689198643605" duration="3071000" />
+      <workItem from="1689460202465" duration="654000" />
+      <workItem from="1689486855768" duration="146000" />
+      <workItem from="1689501484892" duration="520000" />
+      <workItem from="1689783127120" duration="29000" />
+      <workItem from="1689783173294" duration="570000" />
+      <workItem from="1689783785303" duration="653000" />
+      <workItem from="1689784762026" duration="4361000" />
+      <workItem from="1689849299039" duration="5207000" />
+      <workItem from="1689957315777" duration="3562000" />
+      <workItem from="1690034513342" duration="675000" />
+      <workItem from="1690095372434" duration="5731000" />
     </task>
     <task id="LOCAL-00001" summary="[#1] Added &quot;NewMenu&quot; folder, test VCS">
       <created>1688297167519</created>
@@ -196,7 +216,58 @@
       <option name="project" value="LOCAL" />
       <updated>1688891307318</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="NewMenu -&gt; Menu&#10;Fixed bug with missing prefab">
+      <created>1688893126272</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688893126272</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Menu by prefab, One canvas, RectTransform for UI">
+      <created>1689072448707</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689072448707</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixed bug with cursor, fixed slider values change">
+      <created>1689191374719</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689191374719</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixed StatsShower.cs bug with null, show stats of basic primary, changed ui_shop layout">
+      <created>1689200760318</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689200760318</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Settings UI, Added post processing, Changed camera positions">
+      <created>1689460858996</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1689460858996</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Сhanged architecture in inspector&#10;SaveWeap method&#10;Added 2 cinemachine cams&#10;MenuStates.cs&#10;Some fixes">
+      <option name="closed" value="true" />
+      <created>1689790624930</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689790624930</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Deleted post-processing, some fixes, added buy button, saving commit before changing WeaponHandler.cs logic">
+      <option name="closed" value="true" />
+      <created>1689958297270</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689958297270</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +320,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="[#1] &#10;- Added NewMenuScene&#10;- VCS test" />
     <MESSAGE value="[#1] Added &quot;NewMenu&quot; folder, test VCS" />
@@ -259,6 +331,14 @@
     <MESSAGE value="[#6] Added DayTime" />
     <MESSAGE value="Fixed weapon change&#10;Some findings" />
     <MESSAGE value="Deleted slider" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted slider" />
+    <MESSAGE value="NewMenu -&gt; Menu&#10;Fixed bug with missing prefab" />
+    <MESSAGE value="Menu by prefab, One canvas, RectTransform for UI" />
+    <MESSAGE value="Fixed bug with cursor, fixed slider values change" />
+    <MESSAGE value="Fixed StatsShower.cs bug with null, show stats of basic primary, changed ui_shop layout" />
+    <MESSAGE value="Settings UI, Added post processing, Changed camera positions" />
+    <MESSAGE value="Сhanged architecture in inspector&#10;SaveWeap method&#10;Added 2 cinemachine cams&#10;MenuStates.cs&#10;Some fixes" />
+    <MESSAGE value="Deleted post-processing, some fixes, added buy button, saving commit" />
+    <MESSAGE value="Deleted post-processing, some fixes, added buy button, saving commit before changing WeaponHandler.cs logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted post-processing, some fixes, added buy button, saving commit before changing WeaponHandler.cs logic" />
   </component>
 </project>

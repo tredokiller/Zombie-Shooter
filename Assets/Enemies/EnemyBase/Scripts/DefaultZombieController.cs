@@ -1,10 +1,11 @@
+using Common.CommonScripts;
 using Common.CommonScripts.States;
 using Enemies.States;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-namespace Enemies.DefaultZombie.Scripts
+namespace Enemies.EnemyBase.Scripts
 {
     public class DefaultZombieController : EnemyBase
     {
@@ -12,6 +13,9 @@ namespace Enemies.DefaultZombie.Scripts
 
         private float _toTargetDistance;
 
+        private const int MinPlayRandomSoundTime = 15;
+        private const int MaxPlayRandomSoundTime = 40;
+        
         private IState _chaseState;
         private IState _attackState;
         private IState _idleState;
@@ -34,12 +38,23 @@ namespace Enemies.DefaultZombie.Scripts
         private void OnEnable()
         {
             SetEnemyBaseData();
+            ProduceRandomSound();
+            
             OnDamaged += () => StateMachine.SetState(_chaseState);
         }
 
         private void Update()
         {
            UpdateState();
+        }
+        
+        private void ProduceRandomSound()
+        {
+            Timer.StartTimer(Random.Range(MinPlayRandomSoundTime, MaxPlayRandomSoundTime), () =>
+            {
+                PlaySound(ActionSoundType.Random);
+                ProduceRandomSound();
+            });
         }
         
         private void UpdateState()

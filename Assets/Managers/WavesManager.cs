@@ -19,7 +19,7 @@ namespace Managers
         private int _currentLyingZombiesCount;
 
         private const float EndlessWavesMultiplier = 1.05f;
-        public const int BetweenWavesCoolDownTime = 45;
+        public const int BetweenWavesCoolDownTime = 60;
 
         private IEnemiesSpawner _enemiesSpawner;
 
@@ -55,6 +55,7 @@ namespace Managers
             _currentWaveIndex += 1;
             _enemiesSpawner.SpawnEnemy(EnemyType.DefaultZombie, _currentDefaultZombiesCount);
             _enemiesSpawner.SpawnEnemy(EnemyType.LyingZombie, _currentLyingZombiesCount);
+            _enemiesSpawner.SpawnEnemy(EnemyType.TankZombie, _currentTankZombiesCount);
             
             OnSpawnedWave?.Invoke();
         }

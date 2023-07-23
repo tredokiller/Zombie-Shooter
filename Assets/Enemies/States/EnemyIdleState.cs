@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Enemies.States
 {
-    public class EnemyIdleState : StateBase<EnemyBase>
+    public class EnemyIdleState : StateBase<EnemyBase.Scripts.EnemyBase>
     {
-        public EnemyIdleState(EnemyBase controller) : base(controller) { }
+        public EnemyIdleState(EnemyBase.Scripts.EnemyBase controller) : base(controller) { }
 
         public override void Enter()
         {

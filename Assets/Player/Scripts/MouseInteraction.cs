@@ -27,7 +27,7 @@ namespace Player.Scripts
                 return hit.point;
             }
             
-            return hit.point;
+            return Vector3.zero;
         }
 
         public Quaternion GetRotationToMousePosition(out Vector3 horizontalDirection , Vector3 objPos)

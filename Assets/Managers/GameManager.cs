@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Weapons.Scripts;
 
@@ -7,6 +8,10 @@ namespace Managers
     {
         private IWeapon[] _selectedWeapons;
         private int _playerMoney;
+        
+        public static Action OnMoneyChanged;
+        
+        private const string PlayerMoneyKey = "PlayerMoney";
         
         public IWeapon[] GetSelectedWeapons()
         {
@@ -23,14 +28,20 @@ namespace Managers
             return _playerMoney;
         }
 
+        public void AddSubtractMoney(int countOfMoney)
+        {
+            _playerMoney += countOfMoney;
+            OnMoneyChanged?.Invoke();
+        }
+
         public void SaveGame()
         {
-            throw new System.NotImplementedException();
+            PlayerPrefs.SetInt(PlayerMoneyKey , _playerMoney);
         }
 
         public void LoadGame()
         {
-            throw new System.NotImplementedException();
+            _playerMoney = PlayerPrefs.GetInt(PlayerMoneyKey);
         }
     }
 }

@@ -871,10 +871,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c20bbd520b83e74db76b04ef2a2ef17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageSlider: {fileID: 0}
-  ammoSlider: {fileID: 0}
-  rapiditySlider: {fileID: 0}
-  reloadTimeSlider: {fileID: 0}
+  damageSlider: {fileID: 7231061411311986270}
+  ammoSlider: {fileID: 5453419983283221140}
+  rapiditySlider: {fileID: 8908327449100064117}
+  reloadTimeSlider: {fileID: 6764990606102195881}
 --- !u!222 &5472903067925946466
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3916,12 +3916,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9213649635217298264}
   - {fileID: 1189731241848276539}
   - {fileID: 2770165373008392407}
   - {fileID: 5432569268420843717}
   - {fileID: 8076912407639181251}
   - {fileID: 8790065545821479795}
+  - {fileID: 9213649635217298264}
   m_Father: {fileID: 1924371944345382647}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

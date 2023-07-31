@@ -37,6 +37,7 @@ using Weapons.Scripts;
         private void SetCoinsValue(int newValue)
         {
             PlayerCoins = newValue;
+            Debug.Log("PlayerCoins: " + PlayerCoins);
         }
 
         private string SetBuyButtonText(bool isPurchased)

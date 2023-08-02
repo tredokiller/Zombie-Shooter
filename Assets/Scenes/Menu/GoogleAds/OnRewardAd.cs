@@ -1,32 +1,43 @@
-using UnityEngine;
+using System;
 using GoogleMobileAds.Api;
+using Managers;
+using UnityEngine;
+using Zenject;
 
-public class OnRewardAd : MonoBehaviour
+namespace Scenes.Menu.GoogleAds
 {
-    [SerializeField] private MenuManager menuManager;
-    [SerializeField] private int rewardCoins;
-    
-    private string RewardedUnitId = "ca-app-pub-3940256099942544/5224354917";
-    
-    private RewardedAd _rewardedAd;
-    private void OnEnable()
+    public class OnRewardAd : MonoBehaviour
     {
-        _rewardedAd = new RewardedAd(RewardedUnitId);
-        AdRequest adRequest = new AdRequest.Builder().Build();
-        _rewardedAd.LoadAd(adRequest);
-        _rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
-    }
+        private IGameManager _gameManager;
     
-    private void HandleUserEarnedReward(object sender, Reward reward)
-    {
-        int playerCoins = menuManager.PlayerCoins;
-        playerCoins += rewardCoins;
-        MenuManager.OnPlayerCoinsChange.Invoke(playerCoins);
-    }
+        [Inject]
+        private void Construct(IGameManager gameManager)
+        {
+            _gameManager = gameManager ?? throw new ArgumentNullException(nameof(gameManager));
+        }
 
-    public void ShowAd()
-    {
-        if(_rewardedAd.IsLoaded())
-            _rewardedAd.Show();
+        [SerializeField] private int rewardCoins;
+
+        private const string RewardedUnitId = "ca-app-pub-3940256099942544/5224354917";
+
+        private RewardedAd _rewardedAd;
+        private void OnEnable()
+        {
+            _rewardedAd = new RewardedAd(RewardedUnitId);
+            AdRequest adRequest = new AdRequest.Builder().Build();
+            _rewardedAd.LoadAd(adRequest);
+            _rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
+        }
+    
+        private void HandleUserEarnedReward(object sender, Reward reward)
+        {
+            _gameManager.AddSubtractMoney(rewardCoins);
+        }
+
+        public void ShowAd()
+        {
+            if(_rewardedAd.IsLoaded())
+                _rewardedAd.Show();
+        }
     }
 }

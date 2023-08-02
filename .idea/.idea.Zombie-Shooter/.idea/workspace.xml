@@ -4,9 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="170c9caa-bba1-4342-a563-7082328b01f9" name="Changes" comment="Changed FireGraph.vfx">
+    <list default="true" id="170c9caa-bba1-4342-a563-7082328b01f9" name="Changes" comment="Add all files*">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Props/Materials/free-icon-money-icons-351769.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Props/Materials/free-icon-money-icons-351769.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Props/Textures/free-icon-money-icons-351769.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Props/Textures/free-icon-money-icons-351769.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/AK-103.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/AK-103.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/AKData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/AKData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/Prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/Prefab/AK-103 Variant.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/Prefab/AK-103 Variant.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/source.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/source/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/source/Materials/AK_103_Base_Color.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/source/Materials/AK_103_Base_Color.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/source/Materials/AK_103_Metallic.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/source/Materials/AK_103_Metallic.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/source/Materials/AK_103_Normal.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/source/Materials/AK_103_Normal.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/source/Materials/AK_103_Roughness.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/source/Materials/AK_103_Roughness.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/textures/AK_103_Base_Color.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/textures/AK_103_Base_Color.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/textures/AK_103_Metallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/textures/AK_103_Metallic.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/textures/AK_103_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/textures/AK_103_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/textures/AK_103_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Weapons/Primary/AK/textures/AK_103_Roughness.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zombie-Shooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.165.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.165.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/GoogleAds/OnRewardAd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/GoogleAds/OnRewardAd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Props/VFX/FireGraph.vfx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Props/VFX/FireGraph.vfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Managers/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/MenuManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Managers/MenuManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/WeaponHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Scripts/WeaponHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +62,7 @@
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../ProjectMovement/Assets/Skripts/Menu/MenuManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ProjectMovement/Assets/Skripts/Player/JumpController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ProjectMovement/Assets/Skripts/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../ProjectMovement/Assets/Skripts/PlayerStates/BaseState.cs" root0="SKIP_HIGHLIGHTING" />
@@ -37,6 +77,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualeffectgraph@14.0.7/Editor/GraphView/VFXViewWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a4d5436ea7d4a8294f23953ca7d8c255000/4a/019482d8/MobileAds.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/9b/417ae990/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6aa56e57ab504395b555cf3ed50fa53d46ac00/ea/85627ac2/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6c9b376c3fca40b787e8c1a2133bf243171a00/23/c4033ac5/Light.cs" root0="SKIP_HIGHLIGHTING" />
@@ -66,7 +107,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.29651162&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.19148937&quot;,
     &quot;git-widget-placeholder&quot;: &quot;ivan-dev&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -155,6 +196,10 @@
       <workItem from="1690126061631" duration="1311000" />
       <workItem from="1690139567364" duration="173000" />
       <workItem from="1690357957804" duration="2451000" />
+      <workItem from="1690818886561" duration="1456000" />
+      <workItem from="1690867863937" duration="2513000" />
+      <workItem from="1690990141059" duration="2036000" />
+      <workItem from="1690997268979" duration="331000" />
     </task>
     <task id="LOCAL-00001" summary="[#1] Added &quot;NewMenu&quot; folder, test VCS">
       <created>1688297167519</created>
@@ -280,7 +325,23 @@
       <option name="project" value="LOCAL" />
       <updated>1690357998953</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Integrated AdMob, linked app by id, maked rewardButton. All`s fine">
+      <option name="closed" value="true" />
+      <created>1690483795174</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1690483795174</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add all files*">
+      <option name="closed" value="true" />
+      <created>1690483858455</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1690483858455</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,25 +416,8 @@
     <MESSAGE value="Fixed bugs after merge, need to:&#10;- Fix tree shader&#10;- Fix Player model&#10;- Fix fire shader" />
     <MESSAGE value="Start to make an vfx_Fire" />
     <MESSAGE value="Changed FireGraph.vfx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed FireGraph.vfx" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Common/CommonScripts/DayTime.cs</url>
-          <line>32</line>
-          <properties documentPath="C:\UnityProjects\Zombie-Shooter\Assets\Common\CommonScripts\DayTime.cs" initialLine="32" containingFunctionPresentation="Method 'Update'">
-            <startOffsets>
-              <option value="895" />
-            </startOffsets>
-            <endOffsets>
-              <option value="968" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Integrated AdMob, linked app by id, maked rewardButton. All`s fine" />
+    <MESSAGE value="Add all files*" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add all files*" />
   </component>
 </project>

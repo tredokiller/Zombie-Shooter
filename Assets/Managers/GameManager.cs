@@ -17,28 +17,23 @@ namespace Managers
         {
             return _selectedWeapons;
         }
-
         public void SetWeaponsToSelectedList(IWeapon[] newSelectedWeapons)
         {
             _selectedWeapons = newSelectedWeapons;
         }
-
         public int GetMoney()
         {
             return _playerMoney;
         }
-
         public void AddSubtractMoney(int countOfMoney)
         {
             _playerMoney += countOfMoney;
             OnMoneyChanged?.Invoke();
         }
-
         public void SaveGame()
         {
             PlayerPrefs.SetInt(PlayerMoneyKey , _playerMoney);
         }
-
         public void LoadGame()
         {
             _playerMoney = PlayerPrefs.GetInt(PlayerMoneyKey);

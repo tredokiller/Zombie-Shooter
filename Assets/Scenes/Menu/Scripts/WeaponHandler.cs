@@ -1,7 +1,9 @@
 using System;
+using Managers;
 using UnityEngine;
 using Weapons.Scripts;
 using Weapons.Scripts.WeaponBase;
+using Zenject;
 
 namespace Scenes.Menu.Scripts
 {
@@ -11,6 +13,8 @@ namespace Scenes.Menu.Scripts
         [SerializeField] private Weapon[] primaryWeapons;
         [SerializeField] private Weapon[] secondaryWeapons;
 
+        private IGameManager _gameManager;
+        
         private IWeapon _currentDisplayedWeapon;
         
         private IWeapon _currentPrimary;
@@ -24,19 +28,22 @@ namespace Scenes.Menu.Scripts
         public static Action<WeaponData> OnWeaponStatsChange; 
         public static Action<bool> OnIsPurchasedState; 
 
+        [Inject]
+        private void Construct(IGameManager gameManager)
+        {
+            _gameManager = gameManager ?? throw new ArgumentNullException(nameof(gameManager));
+        }
         private void Awake()
         {
             _currentWeaponType = WeaponType.Primary;
             SetBasicWeapons();
         }
-
         private void OnEnable()
         {
             MenuManager.OnWeaponTypeChange += SetWeaponType;
             MenuManager.OnWeaponBuyAndEquip += TryToBuyWeapon;
             MenuManager.OnWeaponScroll += CheckIsPurchasedState;
         }
-
         private void OnDisable()
         {
             MenuManager.OnWeaponTypeChange -= SetWeaponType;
@@ -44,7 +51,6 @@ namespace Scenes.Menu.Scripts
             MenuManager.OnWeaponScroll -= CheckIsPurchasedState;
             
         }
-
         private void SetWeaponType(WeaponType weaponType)
         {
             _currentWeaponType = weaponType;
@@ -55,12 +61,10 @@ namespace Scenes.Menu.Scripts
             
             PushWeaponData(_currentDisplayedWeapon.GetWeaponData());
         }
-
         private void PushWeaponData(WeaponData weaponData)
         {
             OnWeaponStatsChange.Invoke(weaponData);
         }
-
         private void SetBasicWeapons()
         {
             if (secondaryWeapons == null || primaryWeapons == null) return;
@@ -77,7 +81,6 @@ namespace Scenes.Menu.Scripts
             else
                 TryToSwitchWeapon(WeaponType.Secondary, ref _currentSecondaryIndex, true);
         }
-
         public void PrevWeapon()
         {
             if (_currentWeaponType == WeaponType.Primary)
@@ -85,7 +88,6 @@ namespace Scenes.Menu.Scripts
             else
                 TryToSwitchWeapon(WeaponType.Secondary, ref _currentSecondaryIndex, false);
         }
-
         private void TryToSwitchWeapon(WeaponType weaponType, ref int weaponIndex, bool isNext)
         {
             var weapons = weaponType == WeaponType.Primary ? primaryWeapons : secondaryWeapons;
@@ -108,7 +110,6 @@ namespace Scenes.Menu.Scripts
             }
             SetCurrentWeapon(weaponType, weapons, weaponIndex);
         }
-
         private void SetCurrentWeapon(WeaponType weaponType, Weapon[] weapons, int weaponIndex)
         { 
             _currentDisplayedWeapon = weaponType == WeaponType.Primary ? _currentPrimary : _currentSecondary;
@@ -125,12 +126,10 @@ namespace Scenes.Menu.Scripts
             _currentDisplayedWeapon.SetActive(true);
             PushWeaponData(_currentDisplayedWeapon.GetWeaponData());
         }
-
         private void CheckIsPurchasedState()
         {
             OnIsPurchasedState.Invoke(_currentDisplayedWeapon.GetWeaponData().isPurchased);
         }
-        
         private void TryToBuyWeapon(int coins)
         {
             if (_currentDisplayedWeapon.GetWeaponData().isPurchased)
@@ -148,14 +147,13 @@ namespace Scenes.Menu.Scripts
             }
 
             PurchaseOrSellWeapon(true);
-            MenuManager.OnPlayerCoinsChange.Invoke(coins - weaponPrice);
+            _gameManager.AddSubtractMoney(-weaponPrice);
             
-            Debug.Log("Purchased successfully!, coins left: " + (coins - weaponPrice));
+            Debug.Log("Purchased successfully!, coins left: " + _gameManager.GetMoney());
             OnIsPurchasedState.Invoke(_currentDisplayedWeapon.GetWeaponData().isPurchased);
             
             EquipWeapon();
         }
-
         public void PurchaseOrSellWeapon(bool isPurchased)
         {
             _currentDisplayedWeapon.GetWeaponData().isPurchased = isPurchased;

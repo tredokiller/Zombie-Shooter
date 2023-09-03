@@ -1,3 +1,5 @@
+using System;
+using Common.SaveData;
 using UnityEngine;
 
 namespace Weapons.Scripts.WeaponBase
@@ -6,8 +8,10 @@ namespace Weapons.Scripts.WeaponBase
     public class WeaponData : ScriptableObject
     {
         public WeaponType weaponType;
-        public string weaponName = "Pistol";
+        public WeaponName weaponName;
 
+        public GameObject weaponPrefab;
+        
         public int weaponPrice;
         public bool isPurchased = false;
         
@@ -24,5 +28,15 @@ namespace Weapons.Scripts.WeaponBase
         public AudioClip shotSound;
         public AudioClip reloadSound;
         public AudioClip emptyMagazineSound;
+
+        public WeaponSaveData GetWeaponSaveData()
+        {
+            return new WeaponSaveData(weaponName, isPurchased);
+        }
+
+        public void SetWeaponSaveData(WeaponSaveData saveData)
+        {
+            isPurchased = saveData.isPurchased;
+        }
     }
 }

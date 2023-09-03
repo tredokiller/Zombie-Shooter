@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GlockData
   m_EditorClassIdentifier: 
   weaponType: 0
-  weaponName: Pistol
+  weaponName: 4
+  weaponPrefab: {fileID: 4112424498636379772, guid: 53c2626298d18e94a80ed8849e90c784, type: 3}
   weaponPrice: 150
   isPurchased: 1
   maxAmmo: 50
@@ -22,6 +23,6 @@ MonoBehaviour:
   currentMagazineAmmo: 10
   damage: 50
   minTimeBetweenFire: 0.5
-  shotSound: {fileID: 8300000, guid: 26b55deb83e2f3645aa3a85226149559, type: 3}
-  reloadSound: {fileID: 8300000, guid: 701f2e1a67f74f64ca4beb43558ef9d0, type: 3}
+  shotSound: {fileID: 8300000, guid: 446d60824040c044ca0b97deffd66a9b, type: 3}
+  reloadSound: {fileID: 8300000, guid: a5efe59597d5e9b4a8e67c8a8521c102, type: 3}
   emptyMagazineSound: {fileID: 8300000, guid: 78d632ae199db1543b4031e5ebbd791a, type: 3}

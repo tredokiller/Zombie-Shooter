@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21995aa9194d4ab439805b9a35c7bc97, type: 3}
+  m_Name: Beretta 93R
+  m_EditorClassIdentifier: 
+  weaponType: 0
+  weaponName: 5
+  weaponPrefab: {fileID: 768383461201976031, guid: d4e2345cf73a7964bb484fcb60223b63, type: 3}
+  weaponPrice: 1500
+  isPurchased: 0
+  maxAmmo: 120
+  maxMagazineAmmo: 17
+  reloadTime: 2
+  currentMagazineAmmo: 17
+  damage: 40.4
+  minTimeBetweenFire: 0.345
+  shotSound: {fileID: 8300000, guid: e95774b8f37b51d4b867c38ed2e4e6c7, type: 3}
+  reloadSound: {fileID: 8300000, guid: a5efe59597d5e9b4a8e67c8a8521c102, type: 3}
+  emptyMagazineSound: {fileID: 8300000, guid: 78d632ae199db1543b4031e5ebbd791a, type: 3}

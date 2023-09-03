@@ -6,11 +6,11 @@ namespace Common.CommonScripts
 {
     public class ObjectFader : MonoBehaviour
     {
-        [SerializeField] private float fadeSpeed;
+        [SerializeField] private float fadeSpeed = 1f;
 
         private float _originalOpacity;
         private List<Material> _materials;
-        private const float FadeAmount = 0.1f;
+        private const float FadeAmount = 0.2f;
 
         private bool _doFade;
 

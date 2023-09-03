@@ -1,7 +1,9 @@
 using System;
 using System.Linq;
 using Common.CommonScripts;
+using Common.CommonScripts.Interfaces;
 using Common.CommonScripts.States;
+using Managers;
 using UnityEngine;
 using UnityEngine.AI;
 using Weapons.Scripts;
@@ -24,7 +26,8 @@ namespace Enemies.EnemyBase.Scripts
         [SerializeField] private AudioClip[] randomSounds;
         public GameObject Mesh { protected set; get; }
         public Transform TargetTransform { private set; get; }
-        public IDamageable TargetDamageable { private set; get; }
+        protected IDamageable TargetDamageable { private set; get; }
+        public IGameManager GameManager { private set; get; }
 
         protected StateMachine StateMachine;
 
@@ -49,9 +52,11 @@ namespace Enemies.EnemyBase.Scripts
         public float AttackCooldown { private set; get; }
 
         [Inject]
-        private void Constructor(ITarget target)
+        private void Constructor(ITarget target , IGameManager gameManager)
         {
             TargetTransform = target.GetTargetTransform();
+            GameManager = gameManager;
+            
             TargetDamageable = TargetTransform.gameObject.GetComponent<IDamageable>();
             StateMachine = GetComponent<StateMachine>();
             _collider = GetComponent<Collider>();

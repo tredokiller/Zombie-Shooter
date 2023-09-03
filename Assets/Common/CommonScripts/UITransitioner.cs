@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 namespace Common.CommonScripts
 {
@@ -9,16 +10,19 @@ namespace Common.CommonScripts
         [SerializeField] private RectTransform transitionObject;
         
         [SerializeField , Range(0, 5)] private float duration;
-        
 
-        public void PlayTransitionFromTo()
+
+        public Action OnTransitionFromToCompleted;
+        public Action OnTransitionToFromCompleted;
+        
+        public void PlayTransitionFromTo(Transition.TransitionFinished callback = null)
         {
-            Transition.TransitionFromTo(transitionObject , fromPosition.position, toPosition.position , duration);
+            Transition.TransitionFromTo(transitionObject , fromPosition.position, toPosition.position , duration, callback);
         }
 
-        public void PlayTransitionToFrom()
+        public void PlayTransitionToFrom(Transition.TransitionFinished callback = null)
         {
-            Transition.TransitionFromTo(transitionObject , toPosition.position, fromPosition.position , duration);
+            Transition.TransitionFromTo(transitionObject , toPosition.position, fromPosition.position , duration , callback);
         }
     }
 }

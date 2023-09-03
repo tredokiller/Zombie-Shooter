@@ -1,10 +1,24 @@
-using UnityEngine;
 using GoogleMobileAds.Api;
+using Managers;
+using UnityEngine;
+using Zenject;
 
-public class AdManager : MonoBehaviour
+namespace Scenes.Menu.GoogleAds
 {
-    private void Awake()
+    public class AdManager : MonoBehaviour
     {
-        MobileAds.Initialize(status => { });
+        private IGameManager _gameManager;
+            
+        [Inject]
+        private void Costructor(IGameManager gameManager)
+        {
+            _gameManager = gameManager;
+        }
+        
+        
+        private void Start()
+        {
+            MobileAds.Initialize(status => { });
+        }
     }
 }

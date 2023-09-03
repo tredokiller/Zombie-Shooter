@@ -1,15 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Timers;
 using Common.CommonScripts;
 using Common.CommonScripts.States;
 using Managers;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Animations.Rigging;
-using UnityEngine.Serialization;
-using Weapons.Scripts;
+using Weapons.Scripts.WeaponBase;
 using Zenject;
 using Random = UnityEngine.Random;
 using Timer = Common.CommonScripts.Timer;

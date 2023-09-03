@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: DefaultZombieData
   m_EditorClassIdentifier: 
   attackRadius: 2.5
-  chasingRadius: 30
-  chasingSpeed: 1.1
+  chasingRadius: 70
+  chasingSpeed: 1.8
   health: 100
   attackDamage: 15
   attackCooldown: 2
-  latencyToAttackDamage: 0.8
+  latencyToAttackDamage: 0.09
+  countMoneyForKill: 5

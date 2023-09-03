@@ -1,4 +1,5 @@
 using Common.CommonScripts;
+using Common.CommonScripts.Interfaces;
 using Player.Scripts;
 using UnityEngine;
 using Zenject;

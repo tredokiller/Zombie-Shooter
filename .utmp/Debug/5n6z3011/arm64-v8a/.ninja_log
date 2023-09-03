@@ -1,0 +1,5 @@
+# ninja log v5
+4	292	7154470116533074	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	44676a1ed7d24cf3
+292	488	7154470118091104	C:/Unity/Projects/Zombie Smasher/Library/PramData/AndroidApplicationController/Cache/com.ZLO.ZombieSmasher/gradle-project/unityLibrary/build/intermediates/cxx/Debug/5n6z3011/obj/arm64-v8a/libswappywrapper.so	f3967606cb5441d8
+2	168	7154477780474601	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	44676a1ed7d24cf3
+169	341	7154477781720706	C:/Unity/Projects/Zombie Smasher/Library/PramData/AndroidApplicationController/Cache/com.ZLO.ZombieSmasher/gradle-project/unityLibrary/build/intermediates/cxx/Debug/5n6z3011/obj/arm64-v8a/libswappywrapper.so	f3967606cb5441d8

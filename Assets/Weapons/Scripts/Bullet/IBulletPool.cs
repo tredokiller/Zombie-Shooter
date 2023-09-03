@@ -1,4 +1,4 @@
-namespace Weapons.Scripts
+namespace Weapons.Scripts.Bullet
 {
     public interface IBulletPool
     {

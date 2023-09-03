@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Weapons.Scripts
+namespace Weapons.Scripts.Bullet
 {
     [RequireComponent(typeof(BulletPool))]
     public class BulletSpawner : MonoBehaviour , IBulletSpawner

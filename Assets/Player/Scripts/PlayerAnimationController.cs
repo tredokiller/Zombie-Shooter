@@ -28,8 +28,18 @@ namespace Player.Scripts
         private void OnEnable()
         {
             WeaponSwitcher.OnWeaponSwitched += UpdateWeapon;
-            Weapon.OnShot += () => animator.SetTrigger(ShotTrigger);
-            Weapon.OnReload += () => animator.SetTrigger(ReloadTrigger);
+            Weapon.OnShot += SetShotTrigger;
+            Weapon.OnReload += SetReloadTrigger;
+        }
+
+        private void SetShotTrigger()
+        {
+            animator.SetTrigger(ShotTrigger);
+        }
+
+        private void SetReloadTrigger()
+        {
+            animator.SetTrigger(ReloadTrigger);
         }
         
         private void Update()
@@ -48,8 +58,8 @@ namespace Player.Scripts
         private void OnDisable()
         {
             WeaponSwitcher.OnWeaponSwitched -= UpdateWeapon;
-            Weapon.OnShot -= () => animator.SetTrigger(ShotTrigger);
-            Weapon.OnReload -= () => animator.SetTrigger(ReloadTrigger);
+            Weapon.OnShot -= SetShotTrigger;
+            Weapon.OnReload -= SetReloadTrigger;
         }
 
     }

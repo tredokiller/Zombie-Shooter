@@ -1,32 +1,82 @@
-using UnityEngine;
+using System;
 using GoogleMobileAds.Api;
+using Managers;
+using UnityEngine;
+using Zenject;
 
-public class OnRewardAd : MonoBehaviour
+namespace Scenes.Menu.GoogleAds
 {
-    [SerializeField] private MenuManager menuManager;
-    [SerializeField] private int rewardCoins;
-    
-    private string RewardedUnitId = "ca-app-pub-3940256099942544/5224354917";
-    
-    private RewardedAd _rewardedAd;
-    private void OnEnable()
+    public class OnRewardAd : MonoBehaviour
     {
-        _rewardedAd = new RewardedAd(RewardedUnitId);
-        AdRequest adRequest = new AdRequest.Builder().Build();
-        _rewardedAd.LoadAd(adRequest);
-        _rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
-    }
+        private IGameManager _gameManager;
+        
+        [SerializeField] private int rewardCoins;
     
-    private void HandleUserEarnedReward(object sender, Reward reward)
-    {
-        int playerCoins = menuManager.PlayerCoins;
-        playerCoins += rewardCoins;
-        MenuManager.OnPlayerCoinsChange.Invoke(playerCoins);
-    }
+        private const string RewardedUnitId = "ca-app-pub-3940256099942544/5224354917";
+    
+        private RewardedAd _rewardedAd;
+        
 
-    public void ShowAd()
+        [Inject]
+        private void Constructor(IGameManager gameManager)
+        {
+            _gameManager = gameManager;
+        }
+        
+        
+       
+        private void LoadRewardedAd()
+        {
+            // Clean up the old ad before loading a new one.
+            if (_rewardedAd != null)
+            {
+                _rewardedAd.Destroy();
+                _rewardedAd = null;
+            }
+
+            Debug.Log("Loading the rewarded ad.");
+
+            // create our request used to load the ad.
+            var adRequest = new AdRequest();
+            adRequest.Keywords.Add("unity-admob-sample");
+
+            // send the request to load the ad.
+            RewardedAd.Load(RewardedUnitId, adRequest,
+                (RewardedAd ad, LoadAdError error) =>
+                {
+                    // if error is not null, the load request failed.
+                    if (error != null || ad == null)
+                    {
+                        Debug.LogError("Rewarded ad failed to load an ad " +
+                                       "with error : " + error);
+                        return;
+                    }
+
+                    Debug.Log("Rewarded ad loaded with response : "
+                              + ad.GetResponseInfo());
+
+                    _rewardedAd = ad; 
+                });
+        }
+        
+        public void ShowRewardedAd()
+        {
+            LoadRewardedAd();
+            if (_rewardedAd != null && _rewardedAd.CanShowAd())
+            {
+                _rewardedAd.Show((Reward reward) =>
+                {
+                    HandleUserEarnedReward();
+                });
+            }
+        }
+        
+        
+        private void HandleUserEarnedReward()
     {
-        if(_rewardedAd.IsLoaded())
-            _rewardedAd.Show();
+        _gameManager.AddSubtractMoney(rewardCoins);
+        _gameManager.SaveGame();
+    }
+        
     }
 }

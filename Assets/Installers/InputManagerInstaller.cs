@@ -1,4 +1,4 @@
-using Inputs;
+using Managers;
 using UnityEngine;
 using Zenject;
 

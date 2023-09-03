@@ -18,6 +18,8 @@ namespace Enemies.States
             Controller.NavAgent.speed = 0;
             
             Controller.PlaySound(ActionSoundType.Death);
+            
+            Controller.GameManager.AddSubtractMoney(Controller.enemyData.countMoneyForKill);
                 
             Timer.StartTimer(TimeToDisableEnemy, () => Controller.gameObject.SetActive(false));
         }

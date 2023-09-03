@@ -34,7 +34,7 @@ namespace Weapons.AmmoBox.Scripts
         {
             var ammoCount = Random.Range(minSpawnAmmo, maxSpawnAmmo);
             var ammoBoxHorizontalPosition = RendererTools.GetRandomPositionInRenderer(spawnZone);
-
+            
             var ammoBox = _diContainer.InstantiatePrefabForComponent<AmmoBox>(ammoBoxPrefab, transform);
 
             ammoBox.AmmoInBox = ammoCount;

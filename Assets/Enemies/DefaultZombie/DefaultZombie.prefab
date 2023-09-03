@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9157053590839756908}
   - component: {fileID: 3769544930268076597}
   - component: {fileID: 4532070576829129687}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DefaultZombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.571
       inSlope: 0
       outSlope: 0
       tangentMode: 0

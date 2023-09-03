@@ -1,5 +1,6 @@
 using UnityEngine;
 using Weapons.Scripts;
+using Weapons.Scripts.Bullet;
 using Zenject;
 
 namespace Installers

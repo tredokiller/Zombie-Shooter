@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jogSpeed: 5
   runSpeed: 8
+  health: 100
+  maxHealth: 100
   smoothSpeedTime: 10
   state: 0

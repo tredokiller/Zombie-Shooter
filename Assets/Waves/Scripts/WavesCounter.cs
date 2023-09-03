@@ -63,7 +63,7 @@ namespace Waves.Scripts
         {
             wavesDisplayTextObj.text = WavesDisplayText + _wavesManager.GetCurrentWaveValue();
             _uiTransitioner.PlayTransitionFromTo();
-            Timer.StartTimer(wavesDisplayVisibilityDuration , _uiTransitioner.PlayTransitionToFrom);
+            Timer.StartTimer(wavesDisplayVisibilityDuration ,  () => _uiTransitioner.PlayTransitionToFrom());
         }
         
 

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5192014995261444920}
   - component: {fileID: 1475438021758235935}
   - component: {fileID: 6063195120370821137}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LyingZombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}

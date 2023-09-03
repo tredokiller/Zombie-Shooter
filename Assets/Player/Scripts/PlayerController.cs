@@ -1,11 +1,12 @@
 using System;
 using Common.CommonScripts;
+using Common.CommonScripts.Interfaces;
 using Common.CommonScripts.States;
-using Inputs;
 using Managers;
 using Player.Scripts.States;
 using UnityEngine;
 using Weapons.Scripts;
+using Weapons.Scripts.WeaponBase;
 using Zenject;
 using Random = UnityEngine.Random;
 
@@ -55,7 +56,9 @@ namespace Player.Scripts
 
         public Vector3 RotationForAnimationHorizontal { private set; get; }
         
-        private Vector2 _inputPlayer;
+        private Vector2 _inputPlayerMovement;
+        private Vector2 _inputPlayerMovementNonZero;
+        private Vector2 _inputPlayerFire;
         
         public IWeapon CurrentWeapon { private set; get; }
         public WeaponType weaponType;
@@ -159,7 +162,12 @@ namespace Player.Scripts
 
         private void Rotate()
         {
-            var targetRotation = _mouseInteraction.GetRotationToMousePosition(out _horizontalDirection , transform.position);
+            var targetRotation = Quaternion.LookRotation(new Vector3(_inputPlayerMovementNonZero.x, 0 , _inputPlayerMovementNonZero.y));
+            if (_inputPlayerFire != Vector2.zero)
+            {
+                targetRotation = Quaternion.LookRotation(new Vector3(_inputPlayerFire.x, 0 , _inputPlayerFire.y));
+            }
+            
             weaponPositions.rotation = Quaternion.Lerp(weaponPositions.rotation, targetRotation, smoothRotationTime * Time.deltaTime);
             
             if (_horizontalVelocity == Vector2.zero)
@@ -179,12 +187,18 @@ namespace Player.Scripts
 
         private void UpdateInputPlayer()
         {
-            _inputPlayer = _playerActions.Move.ReadValue<Vector2>();
+            _inputPlayerMovement = _playerActions.Move.ReadValue<Vector2>();
+
+            if (_inputPlayerMovement != Vector2.zero)
+            {
+                _inputPlayerMovementNonZero = _inputPlayerMovement;
+            }
+            _inputPlayerFire = _playerActions.Fire.ReadValue<Vector2>();
         }
         
         private void Move()
         {
-            _horizontalVelocity = _inputPlayer * _currentSpeed;
+            _horizontalVelocity = _inputPlayerMovement * _currentSpeed;
             RotationForAnimationHorizontal =
                 playerMesh.transform.InverseTransformDirection(new Vector3(_horizontalVelocity.x + _camera.transform.up.x , 0f , _horizontalVelocity.y));
 

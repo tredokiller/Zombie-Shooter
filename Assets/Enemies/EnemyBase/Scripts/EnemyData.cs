@@ -12,5 +12,6 @@ namespace Enemies
         public float attackDamage = 15f;
         public float attackCooldown = 2f;
         public float latencyToAttackDamage = 0.5f;
+        [Range(5, 35)]public int countMoneyForKill = 5;
     }
 }

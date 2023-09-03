@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21995aa9194d4ab439805b9a35c7bc97, type: 3}
+  m_Name: PKM
+  m_EditorClassIdentifier: 
+  weaponType: 1
+  weaponName: 2
+  weaponPrefab: {fileID: 1694719099825074581, guid: fe4aee95a2e4dd340b174485413cf0ba, type: 3}
+  weaponPrice: 5000
+  isPurchased: 0
+  maxAmmo: 250
+  maxMagazineAmmo: 50
+  reloadTime: 4
+  currentMagazineAmmo: 50
+  damage: 35
+  minTimeBetweenFire: 0.158
+  shotSound: {fileID: 8300000, guid: d65f61951df0d2640a71473927550ea8, type: 3}
+  reloadSound: {fileID: 8300000, guid: a5efe59597d5e9b4a8e67c8a8521c102, type: 3}
+  emptyMagazineSound: {fileID: 8300000, guid: 78d632ae199db1543b4031e5ebbd791a, type: 3}

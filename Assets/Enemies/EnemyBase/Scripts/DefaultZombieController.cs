@@ -1,5 +1,7 @@
+using System;
 using Common.CommonScripts;
 using Common.CommonScripts.States;
+using DG.Tweening;
 using Enemies.States;
 using UnityEngine;
 using UnityEngine.AI;
@@ -14,12 +16,14 @@ namespace Enemies.EnemyBase.Scripts
         private float _toTargetDistance;
 
         private const int MinPlayRandomSoundTime = 15;
-        private const int MaxPlayRandomSoundTime = 40;
+        private const int MaxPlayRandomSoundTime = 80;
         
         private IState _chaseState;
         private IState _attackState;
         private IState _idleState;
         private IState _dieState;
+
+        private Tween _randomSoundPlayTimer;
 
         private void Awake()
         {
@@ -50,7 +54,7 @@ namespace Enemies.EnemyBase.Scripts
         
         private void ProduceRandomSound()
         {
-            Timer.StartTimer(Random.Range(MinPlayRandomSoundTime, MaxPlayRandomSoundTime), () =>
+            _randomSoundPlayTimer = Timer.StartTimer(Random.Range(MinPlayRandomSoundTime, MaxPlayRandomSoundTime), () =>
             {
                 PlaySound(ActionSoundType.Random);
                 ProduceRandomSound();
@@ -93,6 +97,14 @@ namespace Enemies.EnemyBase.Scripts
             if(_toTargetDistance <= AttackRadius)
             {
                 TargetDamageable.TookDamage(Damage);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (_randomSoundPlayTimer != null)
+            {
+                _randomSoundPlayTimer.Kill();
             }
         }
     }

@@ -1,10 +1,10 @@
 using System;
-using Inputs;
+using System.Collections.Generic;
+using Managers;
 using UnityEngine;
-using Weapons.Scripts.WeaponBase;
 using Zenject;
 
-namespace Weapons.Scripts
+namespace Weapons.Scripts.WeaponBase
 {
     public class WeaponSwitcher : MonoBehaviour
     {
@@ -13,15 +13,26 @@ namespace Weapons.Scripts
         private int _currentWeaponIndex;
         
         private InputManager _inputManager;
+        private IGameManager _gameManager;
+        private DiContainer _diContainer;
+        
         private GameInput.PlayerActions _playerActions;
 
         public static Action OnWeaponSwitched;
-        
+
+
+        private void Awake()
+        { 
+            LoadWeapons();
+        }
 
         [Inject]
-        private void Constructor(InputManager inputManager)
+        private void Constructor(InputManager inputManager , IGameManager gameManager , DiContainer diContainer)
         {
             _inputManager = inputManager;
+            _gameManager = gameManager;
+            _diContainer = diContainer;
+            
             _playerActions = _inputManager.GetPlayerActions();
         }
 
@@ -49,6 +60,21 @@ namespace Weapons.Scripts
             }
         }
 
+        private void LoadWeapons() //Loading weapons from GameManager
+        {
+            var loadedWeaponDates = _gameManager.GetSelectedWeaponsData();
+            List<Weapon> newWeaponsList = new List<Weapon>();
+            foreach (var weaponData in loadedWeaponDates)
+            {
+                var weapon=_diContainer.InstantiatePrefab(weaponData.weaponPrefab);
+                weapon.SetActive(false);
+                
+                newWeaponsList.Add(weapon.GetComponent<Weapon>());
+            }
+
+            weapons = newWeaponsList.ToArray();
+        }
+        
         private void SetCurrentWeapon()
         {
             var newWeapon = weapons[_currentWeaponIndex];

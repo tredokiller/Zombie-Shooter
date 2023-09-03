@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483fb9333d903d047aceeb99f93e28bd, type: 3}
+  m_Name: SaveData
+  m_EditorClassIdentifier: 
+  saveData:
+    playerSaveData:
+      playerMoney: 200
+      currentPrimarySaveData:
+        weaponName: 0
+        isPurchased: 1
+      currentSecondarySaveData:
+        weaponName: 4
+        isPurchased: 1
+    weaponsSaveData:
+    - weaponName: 1
+      isPurchased: 0
+    - weaponName: 5
+      isPurchased: 0
+    - weaponName: 3
+      isPurchased: 0
+    - weaponName: 4
+      isPurchased: 1
+    - weaponName: 0
+      isPurchased: 1
+    - weaponName: 2
+      isPurchased: 0
+  PlayerMoney: 200
+  allWeapons:
+  - {fileID: 11400000, guid: a12bfa26f7fe81448b04d6eed9e1226b, type: 2}
+  - {fileID: 11400000, guid: 69177579c82d0134aaf086cb609900fc, type: 2}
+  - {fileID: 11400000, guid: eda257578b6f6a842a6868acf81f2019, type: 2}
+  - {fileID: 11400000, guid: 1a40d1e77c4ab3e4e9ede5c999b9780d, type: 2}
+  - {fileID: 11400000, guid: 630ec54102e7cd542bbd1e071a926855, type: 2}
+  - {fileID: 11400000, guid: 054242f35245f2542ae2116365608483, type: 2}

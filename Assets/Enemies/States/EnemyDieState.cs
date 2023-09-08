@@ -7,7 +7,10 @@ namespace Enemies.States
 {
     public class EnemyDieState : StateBase<EnemyBase.Scripts.EnemyBase>
     {
-        public EnemyDieState(EnemyBase.Scripts.EnemyBase controller) : base(controller) { }
+        public EnemyDieState(EnemyBase.Scripts.EnemyBase controller) : base(controller)
+        {
+            IsPrimaryState = true;
+        }
 
         private const float TimeToDisableEnemy = 8f;
         

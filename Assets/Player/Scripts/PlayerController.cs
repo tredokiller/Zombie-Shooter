@@ -35,7 +35,6 @@ namespace Player.Scripts
         
         private float _currentSpeed;
 
-        private IMouseInteraction _mouseInteraction;
         private CharacterController _characterController;
         private WeaponSwitcher _weaponSwitcher;
         private StateMachine _stateMachine;
@@ -80,7 +79,6 @@ namespace Player.Scripts
         private void Constructor(InputManager inputManager ,IMouseInteraction mouseInteraction, ISfxManager sfxManager)
         {
             _inputManager = inputManager;
-            _mouseInteraction = mouseInteraction;
             _sfxManager = sfxManager;
         }
         
@@ -117,7 +115,8 @@ namespace Player.Scripts
 
         private void OnEnable()
         {
-            _playerActions.Reload.started += context => TryToReload(); 
+            _playerActions.Reload.started += context => TryToReload();
+            _playerActions.Fire.started += context => TryToReloadIfAmmoIsCompletelyEmpty();
             WeaponSwitcher.OnWeaponSwitched += UpdateWeapon;
         }
 
@@ -133,6 +132,7 @@ namespace Player.Scripts
             ApplyGravity();
 
             if (_isDied) return;
+            
             Rotate();
             Move();
             UpdateWeaponInteraction();
@@ -258,7 +258,17 @@ namespace Player.Scripts
             }
         }
 
-
+        private void TryToReloadIfAmmoIsCompletelyEmpty()
+        {
+            if (CurrentWeapon != null)
+            {
+                if (CurrentWeapon.GetCurrentMagazineAmmo() <= 0)
+                {
+                    CurrentWeapon.Reload();
+                }
+            }
+        }
+        
         private void UpdateWeaponInteraction()
         {
             UpdateWeaponPosition();
@@ -271,6 +281,7 @@ namespace Player.Scripts
         private void OnDisable()
         {
             _playerActions.Reload.started -= context => TryToReload(); 
+            _playerActions.Fire.started -= context => TryToReloadIfAmmoIsCompletelyEmpty();
             WeaponSwitcher.OnWeaponSwitched -= UpdateWeapon;
         }
 

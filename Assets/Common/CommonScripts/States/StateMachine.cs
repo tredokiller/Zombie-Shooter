@@ -12,11 +12,14 @@ namespace Common.CommonScripts.States
         {
             if (_state != null)
             {
-                if (_state.CanChangeState() == false)
+                if (state.GetIsPrimaryState() == false)
                 {
-                    return;
+                    if (_state.CanChangeToAnotherState() == false)
+                    {
+                        return;
+                    }
                 }
-                
+
                 var previousState = _state;
                 if (previousState != state)
                 {

@@ -116,9 +116,7 @@ namespace Weapons.Scripts.WeaponBase
                     Timer.StartTimer(weaponData.minTimeBetweenFire , () => _canShoot = true);
 
                     OnShot.Invoke();
-                    return;
                 }
-                Reload();
             }
         }
 

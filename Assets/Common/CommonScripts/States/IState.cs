@@ -4,7 +4,7 @@ namespace Common.CommonScripts.States
     {
         public void Enter();
         public void Update();
-
-        public bool CanChangeState();
+        public bool CanChangeToAnotherState();
+        public bool GetIsPrimaryState();
     }
 }

@@ -22,7 +22,7 @@ namespace Enemies.States
         {
             Controller.NavAgent.speed = 0;
             Controller.SetState(State.Attack);
-            IsCanChangeState = true;
+            CanChangeState = true;
         }
 
         private void TryToAttack()
@@ -30,7 +30,7 @@ namespace Enemies.States
             RotationToTarget();
             if (_canAttack)
             {
-                IsCanChangeState = true;
+                CanChangeState = true;
                 _canAttack = false;
 
                 Timer.StartTimer(LatencyToAttack, Attack);
@@ -38,7 +38,7 @@ namespace Enemies.States
         }
         private void Attack()
         {
-            IsCanChangeState = false;
+            CanChangeState = false;
             Controller.OnAttacked?.Invoke();
             Timer.StartTimer(Controller.AttackCooldown, () => _canAttack = true);
             Timer.StartTimer(_latencyToGiveDamageToPlayer , Controller.DamageTarget);

@@ -5,7 +5,8 @@ namespace Player.Scripts.States
     public abstract class StateBase<T> : IState
     {
         protected readonly T Controller;
-        protected bool IsCanChangeState = true;
+        protected bool CanChangeState = true;
+        protected bool IsPrimaryState = false;
 
         protected StateBase(T controller)
         {
@@ -16,9 +17,14 @@ namespace Player.Scripts.States
 
         public abstract void Update();
 
-        public bool CanChangeState()
+        public bool CanChangeToAnotherState()
         {
-            return IsCanChangeState;
+            return CanChangeState;
+        }
+
+        public bool GetIsPrimaryState()
+        {
+            return IsPrimaryState;
         }
     }
 }
